@@ -1,13 +1,18 @@
-% NOTE: It may be necessay to run LaTeX two or more times
+% NOTE: It may be necessary to run LaTeX two or more times
 % in order for section headings, internal and external
 % references, etc. to display properly
 
-
+%————————————————————————————
 % DRAFT MODE
-%The following line is for drafts and produces
+%The following is for drafts and produces
 % a single column of double-spaced text
-\documentclass[preprint,pre,floats,aps,amsmath,amssymb]{revtex4}
+% with a wide right margin for editor's
+% notes
 
+\documentclass[preprint,pre,floats,aps,amsmath,amssymb]{revtex4-1}
+\usepackage{geometry}
+  \geometry{letterpaper,right=2in}
+%————————————————————————————
 % JOURNAL MODE
 % The following line is for publication and produces
 % two columns of single-spaced text
@@ -17,6 +22,7 @@
 % PACKAGES USED IN THIS DOCUMENT
 \usepackage{graphicx}
 \usepackage{bm}
+
 %————————————————————————————
 
 \begin{document}
@@ -31,7 +37,7 @@
 This paper outlines a practical application of an Electronic Healthcare Event environment developed for the providers of Durable Medical Equipment to be able to more efficiently provide care to their patients and get them the equipment that they need sooner. Additionally, we will be providing the details of how Electronic Healthcare Events can be developed to expand beyond the DME industry and make an impact throughout healthcare. It is the intent of this paper to showcase what EHEs can do for Healthcare if deployed properly and provided the right tools to implement them.
 \end{abstract}
 
-\maketitle
+%\maketitle
 
 \section{Introduction}
 We describe DuraChain, a decentralized Electronic Healthcare Event (EHE) environment. We will be utilizing the Matrix protocol to change the infrastructure of current Healthcare record keeping to provide a more secure, faster, and more accessible approach. We believe that, like us, our Healthcare data is a living thing that needs to be dynamically inclined to think patient forward. Furthermore, those who take care of us need a way to access this live data efficiently in an intuitive fashion. We will outline an all inclusive environment to solve this issue, propose an implementation plan for it, and provide details on the current market.
