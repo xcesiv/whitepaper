@@ -1,0 +1,76 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+
+
+% https://tex.stackexchange.com/a/167741/169605
+\usepackage[pages=some]{background}
+\backgroundsetup{
+scale=.85,
+color=black,
+opacity=0.25,
+angle=35,
+contents={%
+  \includegraphics[width=\paperwidth,
+  height=\paperheight]{logo}
+  }%
+}
+% https://tex.stackexchange.com/a/85989/169605
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\large}
+\setlength\epigraphwidth{0.8\textwidth}
+
+%\DeclareFixedFont {<cmd>} {<ENC>} {<family>} {<series>} {<shape>} {<size>}
+\DeclareFixedFont{\titlefont}{T1}{qhv}{b}{}{0.66in}
+\DeclareFixedFont{\subtitlefont}{T1}{qhv}{}{it}{0.33in}
+\DeclareFixedFont{\bodyseriffont}{T1}{qcs}{}{}{0.33in}
+
+
+
+\makeatletter
+\def\printauthor{%
+    {\large \@author}}
+\makeatother
+\author{%
+    {\Large\textbf{Brandon JP Scott}}\\
+    \textit{Chief Technology Officer}\\
+    DuraChain, LLC\\
+    \texttt{xcesiv@durachain.io}\\
+    }
+
+% The following code is borrowed from: https://tex.stackexchange.com/a/86310/10898
+
+
+\begin{document}
+\BgThispage
+\begin{titlepage}
+
+\noindent
+\titlefont{DuraChain} \par
+\vspace{.5in}
+\noindent
+\subtitlefont{A Decentralized Electronic\\Healthcare Event Environment}
+\vspace{1in}
+\bodyseriffont{
+\epigraph{This paper outlines a practical application of an Electronic Healthcare Event environment developed for the providers of Durable Medical Equipment to be able to more efficiently provide care to their patients and get them the equipment that they need sooner. Additionally, we will be providing the details of how Electronic Healthcare Events can be developed to expand beyond the DME industry and make an impact throughout healthcare. It is the intent of this paper to showcase what EHEs can do for Healthcare if deployed properly and provided the right tools to implement them.}%
+{\textit{\today}\par
+\textsc{Keywords}\par
+k1, k2, k3, k4, k5, k6}}
+\null\vfill
+\vspace*{1cm}
+\noindent
+\hfill
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage}
+%
+\begin{minipage}{0.02\linewidth}
+    \rule{1.5pt}{80pt}
+\end{minipage}
+\end{titlepage}
+\clearpage
+\end{document}
