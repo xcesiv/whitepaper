@@ -62,3 +62,11 @@ typings/
 
 # Mac
 .DS_Store
+
+# PDF docs
+.pdf
+
+# LaTeX aux files
+.synctex.gz
+.aux
+.fls
