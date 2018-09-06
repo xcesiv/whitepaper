@@ -1,35 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % NOTE: It may be necessary to run LaTeX two or more times
 % in order for section headings, internal and external
-% references, etc. to display properly
-
-%————————————————————————————
+% references, etc. to build properly
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % DRAFT MODE
-%The following is for drafts and produces
+% Produces
 % a single column of double-spaced text
 % with a wide right margin for editor's
 % notes
-
+%
 \documentclass[letterpaper]{article}
 \usepackage{geometry}
 \usepackage[printwatermark]{xwatermark}
 \usepackage{xcolor}
 \usepackage{graphicx}
-  \newwatermark[allpages,color=grey!20,angle=60,scale=3.5,xpos=0,ypos=0]{DRAFT COPY}
+  \newwatermark[allpages,color=gray!20,angle=60,scale=3.5,xpos=0,ypos=0]{DRAFT COPY}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-%————————————————————————————
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % JOURNAL MODE
 % The following line is for publication and produces
 % two columns of single-spaced text
 %\documentclass[twocolumn,pre,floats,aps,amsmath,amssymb]{revtex4}
-
-%————————————————————————————
-% PACKAGES USED IN THIS DOCUMENT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PACKAGE INVOCATIONS
 \usepackage{graphicx}
 \usepackage{bm}
-
-%————————————————————————————
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -129,11 +136,16 @@ We achieve this by regarding the patient as the single most important, invaluabl
     In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.
 %
   \subsubsection{Patient Rooms}
-  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs paired with discussions about the patient necessary for users to execute their functions.
 
+
+  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.
+%
   EHEs posted to the room comprise the available details about a patient. Events posted by and visible DuraChain users include:
 %
-  \texttt{\begin{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Consider presenting the following EHEs in a table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \texttt{
   {\\
   firstName,\\
   middleName,\\
@@ -148,11 +160,11 @@ We achieve this by regarding the patient as the single most important, invaluabl
   homePhone,\\ 
   mobilePhone,\\ 
   homeAddress\\
-  }\end{verbatim}
+  }
   }
 %
   \subsubsection{Users}
-  User permissions within a Patient’s Room is one of the most critical aspects involved in ensuring the security of patient data. That is why we have developed a system where Users are permitted to a Patient’s Room only by invitation of a qualified member of that Patient’s Room already. In the event the Patient does not have a Room already built, a qualified permission user associated with the Provider working with that Patient will be able to initiate the creation of a Patient Room.
+  The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.
 %
   \paragraph{Administration}
   Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with the project. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security, however, they may be invited to any Patient Room in-order to conduct any updates/maintenance or debug issues that arise for our clients.
