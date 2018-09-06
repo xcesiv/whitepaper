@@ -198,9 +198,11 @@ In order to promote easy navigation of the vast numbers of patient rooms that wi
 
 A user who is responsible for managing patients within a facility has the ability to create a new Patient Room---if the patient does not yet have one---and associate it with the facility's group(s). Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our UXUI ensures a streamlined approach to this functionality.%
 
-\subsection{implementation}
-Implementation of the DuraChain environment will require participation by providers of DME, whom will be our main client base. In-order to properly bring a client into our environment, they must have a copy of our server installed and properly attached to their domain. From there, they can access our environment through our custom-built UI and begin creating Patient Rooms. In-order to join an already created patient room, they must be invited to that room by someone with credentials inside of that room to do so.
-%
+ \subsection{Implementation}
+ Successful implementation of the DuraChain environment requires active adoption and participation by DME providers, who constitute our main client base.%
+
+ In order to bring a client into our environment, they must have a copy of our server software properly installed and attached to their domain. From there, they can access our environment via our custom UI and begin creating Patient Rooms. To join a previously-existing Patient Room, they must be invited to an appropriately credentialed user inside of that room.%
+
 \subsubsection{Protected Health Information}
 There is absolutely a need to discuss the topic of Protected Health Information (PHI) when dealing with sensitive data such as Healthcare. When discussing this for the implementation of the DuraChain environment, what we established was that the servers with the data about the patients and the users who access this must all be HIPPA compliant in-order for our software to be implementable. So, by placing the servers in the domain of the DME provider and the user creation in their hands as well, we are only responsible for ensuring that the clients we bring on to access the DuraChain insure us of their HIPPA compliance, which means, in short, we have put this responsibility in the hands those who implement our software. Not to say that we wish to push compliance issues onto others, but rather, those who are the user base of DuraChain were already needing to be HIPPA compliant in their business already. Therefore, so long as our customer is compliant, so is our software.
 %
