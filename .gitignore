@@ -70,3 +70,4 @@ typings/
 .synctex.gz
 .aux
 .fls
+.fdp_latexmk
