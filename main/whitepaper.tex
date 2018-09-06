@@ -173,7 +173,7 @@ We achieve this by regarding the patient as the single most important, invaluabl
   \paragraph{Administration}
   Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
 
-  \textit{\textbf{N.B.: It seems nontrivial that only one user type is expounded upon in this section.}}%
+  \textit{\textbf{N.B.}: It seems nontrivial that only one user type is mentioned in this section.}%
 
   %\paragraph{Sales Representative}
   % Sales Representative is a certified Assistive Technology Professional (ATP) through Resna which allows them to complete the necessary forms for patients. These users will be in-charge of higher tier facilities in their area and be able to create a Patient Room when appropriate. These users will be able to post EHEs to a patient’s EHR ledger & perform many of the tasks available within the Patient Room.
@@ -182,9 +182,20 @@ We achieve this by regarding the patient as the single most important, invaluabl
   %An Overlay Representative is a less experienced version of a Sales Representative. They will often take lower tier facilities in the area and works with less complicated DME. They will have a Sales Representative who will be working with them that will need to confirm any EHEs they may post to a a patient’s EHR ledger. As they progress and become ATP certified, these users end up becoming Sales Representatives.
 
 \subsubsection{Facilities}
-In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the Group function that is built into the Matrix protocol. This allows patients to be organized into groups associated with the facilities that care for and service them. The user who is responsible for managing a facility and its patient can create patient 
+\textit{\textbf{N.B.}: The notion of a ``room'' in Matrix is already an abstract representation of a physical space in which users interact, but is rather transparent.
 
+By constrast, the use of the term ``facility'' is rather opaque and difficult to abstract from a brick-and-mortar location. It is directly challeneged by the fact that the implementation described here inverts the traditional understanding of who does what where: healthcare functionaries belonging to a facility ``visit'' the patient (by entering their room and writing an entry in the ledger). This is reminiscent of the house calls performed by general practicioners in years past.
 
+Following on from this, the term ``facility'' fails to intuitively capture the gamut of professionals that a patient may interact with. By way of example, The Centers for MediCare and MediCaid Services (and the state-level administrators of these programs), along with other insurance carriers, are difficult to conceptualize as a facility.
+
+Consider retooling the nomenclature here to a paradigm that will be more intuitive for the users, clients, customers, and other stakeholders that you expect to adopt DuraChain.
+
+(Resonating with the notion of a house call, consider calling non-patient, non-DuraChain users ``Providers'' or a similarly abstract name. In this fashion, a Provider could encompass physicians writing scripts for DME, the various intermediaries involved in producing, acquiring, and delivering such equipment, insurance providers, and, eventually, a host of other stakeholders in the patient's care (\textnormal{e.g.,} pharmacies, research/trial physicians, family members, legal professionals, courts, counselors, laboratories, etc.) Such a name change has the added benefit of allowing DuraChain to position/brand/pitch the technology as eminently patient-first since all of the stakeholders in a patient's care must ``come to the patient and have permission to do so.''}%
+In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built-in Group function of the Matrix protocol. This allows patients to be organized into groups associated with the facilities that care for and service them.
+
+The user at a facility
+
+%%%%%
 
  A user who is responsible for managing facilities and patients within said facility can add Patient Rooms to a facility for better organization of the patients and a more streamline approach to understanding our UXUI. It is our goal with our software to not only reimagine how EHRs can be handled and stored, but as well as providing a balance with the most approachable UXUI in the industry. By providing the facility function, patients are organized in a way so that the people who need to quickly sort through the patients they’re working with can do so.
 %
