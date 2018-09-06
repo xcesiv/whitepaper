@@ -129,26 +129,26 @@ We achieve this by regarding the patient as the single most important, invaluabl
     In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.
 %
   \subsubsection{Patient Rooms}
-  Each patient will be added to the software by the creation of a “room” for that patient. Here, the EHE will be posted by the various users and the most up-to-date information about the patient will be the consensus shown. Inside of these rooms will be a running ledger of EHE posting joined with discussion about the patient that may be necessary between the users inside of the patient’s room.
+  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs paired with discussions about the patient necessary for users to execute their functions.
+
+  EHEs posted to the room comprise the available details about a patient. Events posted by and visible DuraChain users include:
 %
-  The details available on a Patient will be events posted to the room. The events that will be posted by and visible to the users of DuraChain about the patient will be:
-%
-  \texttt{
-  { 
-  firstName, 
-  middleName, 
-  lastName,
-  primaryInsProvider,
-  primaryInsIdentifier, 
-  secondaryInsProvider, 
-  secondaryInsIdentifier, 
-  height, 
-  weight, 
-  gender, 
-  homePhone, 
-  mobilePhone, 
-  homeAddress
-  }
+  \texttt{\begin{verbatim}
+  {\\
+  firstName,\\
+  middleName,\\
+  lastName,\\
+  primaryInsProvider,\\
+  primaryInsIdentifier,\\ 
+  secondaryInsProvider,\\ 
+  secondaryInsIdentifier,\\ 
+  height,\\ 
+  weight,\\ 
+  gender,\\ 
+  homePhone,\\ 
+  mobilePhone,\\ 
+  homeAddress\\
+  }\end{verbatim}
   }
 %
   \subsubsection{Users}
