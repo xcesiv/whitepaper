@@ -53,95 +53,99 @@
 %\maketitle
 
 \section{Introduction}
-We describe DuraChain, a decentralized Electronic Healthcare Event (EHE) environment. We will be utilizing the Matrix protocol to change the infrastructure of current Healthcare record keeping to provide a more secure, faster, and more accessible approach. We believe that, like us, our Healthcare data is a living thing that needs to be dynamically inclined to think patient forward. Furthermore, those who take care of us need a way to access this live data efficiently in an intuitive fashion. We will outline an all inclusive environment to solve this issue, propose an implementation plan for it, and provide details on the current market.
-%
+We describe DuraChain, a decentralized electronic healthcare event (\textbf{EHE}) environment. Using the Matrix protocol,
+\footnote{\textit{cf.} \url{https://matrix.org/blog/home/}}
+we will change the infrastructure of healthcare record-keeping by providing an approach that is faster, more secure, and more accessible. We adopt the position that healthcare data is a living entity that mandates a dynamic, sustainable environment in order to thrive and best serve the needs of patients. Following on from that, providers and other stakeholders in the healthcare industry need an efficient and intuitive way to access this data in real time. To address this issue, we outline a comprehensive solution, propose our implementation, and provide a brief analysis of the current state of the market.%
+
 \subsection{Problem}
-There are many problems being faced in healthcare today, of which we are prioritizing Durable Medical Equipment for this paper. Currently, it takes most DME providers approximately six months from starting to work with a patient until that patient receives their equipment. The reasons for this are due in large part to the availability of software that providers can access to help them streamline this process. Many providers are using upwards of five separate softwares that are poorly integrated and are spending upwards of \$15,000 per month for these services. Furthermore, research conducted has shown that patients and most smaller HCOs are unwilling to adapt to new technology that completely replaces what they are currently using, mainly due to not wishing to pay for such services. However, larger HCOs seem to be more open to new ideas and implementations. Therefore, we believe that the major issue with implementing patient-first technology is not going to help with the current needs of HCOs. There is a need for technology to be developed that rethinks how we can help fix the current issues with patient data as well as make it accessible to those who can impact the market directly the quickest.
-%
+While many problems exist in the healthcare industry, we prioritize durable medical equipment (\textbf{DME}) at our current stage of development. At present, it takes most DME providers approximately six months from initial contact with a patient to deliver necessary equipment that improves their quality of life. In large part, this lag is due to the poor availability and/or quality of software that DME providers use to facilitate the flow of information throughout the DME sales order life cycle. In our view, six months is entirely too long.%
+
+Many DME providers use five or more separate softwares that suffer from poor integration and cost in excess \$15,000 per month (\$180,000 per annum), not including labor costs. Many patients and most small-scale healthcare organizations (\textbf{HCO}s) are unwilling to adopt new technology that has the potential to replace their current tools---mainly because of an unwillingness to carry the cost of such services. Larger HCOs, however, seem to be more receptive to new ideas and implementations.﻿%
+
+Thus, we believe that an adequate implementation of patient-first technology that simultaneously addresses the needs of HCOs and patient requires a wholesale rethinking of patient data management so as to make it accessible to those parties who can rapidly impact the market.%
+
 \subsection{Solution}
-We believe that the confounds lay in the ongoing trend toward patient-focused technology. (A prime example is the increasing frequency with which health systems are adopting "patient portals," which are almost universally slow and lacking elegant, intuitive design.) Far from believing that a patient should not have ready access and control over their health data, we argue that such an aim requires that technology for the stakeholders who routinely access, maintain, and transmit such information improves first.
-%
-Indeed, this technology is doomed to fail if conceived and developed in a vacuum; the needs of the patient must be front-of-mind; our solution stems from an approach that focuses on the provider and generates, updates, and transmits a patient's profile in a virtual representation of an exam room. Implementation of the Matrix protocol securely decentralizes patient data while offering an intuitive remedy to well-documented user interface issues in healthcare technology (HCT).
-%
+We believe that the confounds lay in the ongoing trend toward patient-focused technology. (A prime example is the increasing frequency with which health systems are adopting "patient portals," which are almost universally slow and lacking elegant, intuitive design.) Far from believing that a patient should not have ready access and control over their health data, we argue that such an aim requires that technology for the stakeholders who routinely access, maintain, and transmit such information improves first.%
+
+Indeed, this technology is doomed to fail if conceived and developed in a vacuum; the needs of the patient must be front-of-mind; our solution stems from an approach that focuses on the provider and generates, updates, and transmits a patient's profile in a virtual representation of an exam room. Implementation of the Matrix protocol securely decentralizes patient data while offering an intuitive remedy to well-documented user interface issues in healthcare technology (HCT).%
+
 \section{Background}
-DuraChain is a team with more than ten years of experience in the durable medical equipment and software engineering industries. In addition to being leaders in our industries, we have each been directly affected by the slow pace at which the healthcare industry moves. We have a particular sensitivity to patients who suffer from a lack of mobility and believe that our drive and subject matter expertise gives us a distinct edge.
-%
+DuraChain is a team with more than ten years of experience in the durable medical equipment and software engineering industries. In addition to being leaders in our industries, we have each been directly affected by the slow pace at which the healthcare industry moves. We have a particular sensitivity to patients who suffer from a lack of mobility and believe that our drive and subject matter expertise gives us a distinct edge.%
+
 \subsection{Durable Medical Equipment}
-For most people, discussion of healthcare will probably trigger associations with hospitals and doctor's offices. Fewer people will draw connections to medical supplies and equipment that providers order for everyday or extended use. These products support the patient by providing mobility and independence.
-%
-Durable medical equipment is the set of products that are used on an ongoing basis to support a medical need and include hospital beds, oxygen concentrators and tanks, wheelchairs, crutches, commodes, ambulatory aids, blood glucose testing devices and supplies, and myriad other items.
-%
-  \subsubsection{Importance}
-Durable medical equipment plays a crucial role in the modern healthcare system. Without the technology and supplies that make up DME, fatalities because of serious disease, complications, and even sleeping problems would surely rise. The National Association for Home Care reports that over 8 million people in the United States receive home care and values the industry at more than \$140 billion USD. With many populations around the world containing increasingly elderly cohorts, the trend indicates continued growth. From the emergency department to urgent care and assisted living facilities to inside the home, DME is present at every stage in the process of delivering healthcare.
-%
+For most people, discussion of healthcare will probably trigger associations with hospitals and doctor's offices. Fewer people will draw connections to medical supplies and equipment that providers order for everyday or extended use. These products support the patient by providing mobility and independence.%
+
+Durable medical equipment is the set of products that are used on an ongoing basis to support a medical need and include hospital beds, oxygen concentrators and tanks, wheelchairs, crutches, commodes, ambulatory aids, blood glucose testing devices and supplies, and myriad other items.%
+
+\subsubsection{Importance}
+Durable medical equipment plays a crucial role in the modern healthcare system. Without the technology and supplies that make up DME, fatalities because of serious disease, complications, and even sleeping problems would surely rise. The National Association for Home Care reports that over 8 million people in the United States receive home care and values the industry at more than \$140 billion USD. With many populations around the world containing increasingly elderly cohorts, the trend indicates continued growth. From the emergency department to urgent care and assisted living facilities to inside the home, DME is present at every stage in the process of delivering healthcare.%
+
 \subsection{Distributed Ledger Technology}
-Distributed ledger technology (\textbf{DLT}) replicates data across multiple devices based on consensus. These devices can be owned and operated by any person or institution so long as they have access to the network. Since there is no central locus of control over the data, both a peer-to-peer network and a robust consensus algorithm are necessary to ensure the accuracy and integrity of the data.
-%
+Distributed ledger technology (\textbf{DLT}) replicates data across multiple devices based on consensus. These devices can be owned and operated by any person or institution so long as they have access to the network. Since there is no central locus of control over the data, both a peer-to-peer network and a robust consensus algorithm are necessary to ensure the accuracy and integrity of the data.%
+
   \subsubsection{Misconceptions}
-  Distributed ledger technology and blockchain technology are frequently confused as synonyms. Given the rapid onset of these technologies and how they took the attention the media and the public by storm, such confusion is understandable. Mere mention of a blockchain immediately points people's thoughts to financial transactions, speculative trading, imperfect markets defined by their volatility, and overnight millionaires.
+  Distributed ledger technology and blockchain technology are frequently confused as synonyms. Given the rapid onset of these technologies and how they took the attention the media and the public by storm, such confusion is understandable. Mere mention of a blockchain immediately points people's thoughts to financial transactions, speculative trading, imperfect markets defined by their volatility, and overnight millionaires.%
+
+  However, notions like these fail to capture the true scope and potential of DLT. To resolve any ambiguity, the only thing being recorded and transmitted across a distributed ledger is data. Any form of data storage can theoretically be retooled to use DLT.%
+
+  The notion that DLT is an all-or-nothing model for software development is also a misconception. Numerous hypotheses circulate that claim DLT is the harbinger of unprecedented change and disruption to many industries. Over the long run, this may very well prove to be the case. There are, however, far more practical use cases ripe for implementation that will likely serve as stepping-stones since they can be realized quickly and with relative ease.%
 %
-  However, notions like these fail to capture the true scope and potential of DLT. To resolve any ambiguity, the only thing being recorded and transmitted across a distributed ledger is data. Any form of data storage can theoretically be retooled to use DLT. 
-%
-  The notion that DLT is an all-or-nothing model for software development is also a misconception. Numerous hypotheses circulate that claim DLT is the harbinger of unprecedented change and disruption to many industries. Over the long run, this may very well prove to be the case. There are, however, far more practical use cases ripe for implementation that will likely serve as stepping-stones since they can be realized quickly and with relative ease.
-%
-  In the healthcare domain, another persistent myth states that use a distributed ledger requires a radical redesign of how patient data is handled. While the current models are unequivocally ineffective, it is important to cultivate an awareness of what users are able to adapt to, use, and can ultimately result in a practical application.
-%
+  In the healthcare domain, another persistent myth states that use a distributed ledger requires a radical redesign of how patient data is handled. While the current models are unequivocally ineffective, it is important to cultivate an awareness of what users are able to adapt to, use, and can ultimately result in a practical application.%
+
   \subsubsection{Importance}
-  Forecasting the impact of a new technology on any particular industry is a challenging task, to be sure. That being said, it may be prudent to frame the DME-DLT interface as membrane: While the positive effects of DLT on the DME space are easy to see, implementation of distributed ledger technology in a flagship industry like DME and healthcare data may provoke a sea change in a number areas.
+  Forecasting the impact of a new technology on any particular industry is a challenging task, to be sure. That being said, it may be prudent to frame the DME-DLT interface as membrane: While the positive effects of DLT on the DME space are easy to see, implementation of distributed ledger technology in a flagship industry like DME and healthcare data may provoke a sea change in a number areas.%
 
-  Potential improvements in security alone provide a compelling reason to test solutions. What's more, the ability to generate, manage, and transmit records (healthcare or otherwise) with a greater focus on the customer is a non-trivial benefit and could put early adopters of such technology years ahead of the rest of their field.
+  Potential improvements in security alone provide a compelling reason to test solutions. What's more, the ability to generate, manage, and transmit records (healthcare or otherwise) with a greater focus on the customer is a non-trivial benefit and could put early adopters of such technology years ahead of the rest of their field.%
 
-  At the moment, DLT and DME exist in relative isolation. Data handling in DME is demonstrably weak and healthcare is opaque to leaders in DLT. A marriage between the two fields is sure to be profitable for the technology, healthcare stakeholders of all types, and a potentially limitless number of domains.
+  At the moment, DLT and DME exist in relative isolation. Data handling in DME is demonstrably weak and healthcare is opaque to leaders in DLT. A marriage between the two fields is sure to be profitable for the technology, healthcare stakeholders of all types, and a potentially limitless number of domains.%
 
-  The proposal outlined here is meant to serve as the gateway to a practical understanding and implementation of DLT in healthcare. Our choice to focus narrowly on DME does not reflect a limited scope of thought but rather a calculated targeting of an implementation that is possible, feasible, and promotes an easy transition for customers while cutting their costs.
-%
+  The proposal outlined here is meant to serve as the gateway to a practical understanding and implementation of DLT in healthcare. Our choice to focus narrowly on DME does not reflect a limited scope of thought but rather a calculated targeting of an implementation that is possible, feasible, and promotes an easy transition for customers while cutting their costs.%
+
 \section{Architecture}
-The foundation of our technology is data generation, management, and transmission. These cornerstones include novel ways of storing patient data, identifying and providing access to various types of users, and our overall software implementation. 
-%
-To accomplish these objectives, we have carefully considered the precise target of our solution, our plan for implementation and deployment, and a process to ensure that our software adequately addresses the needs of providers and their patient base.
-%
+The foundation of our technology is data generation, management, and transmission. These cornerstones include novel ways of storing patient data, identifying and providing access to various types of users, and our overall software implementation.%
+
+To accomplish these objectives, we have carefully considered the precise target of our solution, our plan for implementation and deployment, and a process to ensure that our software adequately addresses the needs of providers and their patient base.%
+
 \subsection{Current Model}
-The most common methods of maintaining a database of patient records are the electronic healthcare record (\textbf{EHR}) and the electronic medical record (\textbf{EMR}). Both EHR and EMR are centralized collections of data pertaining to an individual patient. They may be centralized to a particular system or a single healthcare practice.
-%
+The most common methods of maintaining a database of patient records are the electronic healthcare record (\textbf{EHR}) and the electronic medical record (\textbf{EMR}). Both EHR and EMR are centralized collections of data pertaining to an individual patient. They may be centralized to a particular system or a single healthcare practice.%
+
   \subsubsection{Electronic Healthcare Records}
-  An electronic health record (\textbf{EHR}) is a digital record of health information. It contains all of the information found in a typical paper chart---plus a lot more. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. An EHR may also contain other relevant information pertaining to health insurance, demographics, and even data imported from personal devices.
-%
+  An electronic health record (\textbf{EHR}) is a digital record of health information. It contains all of the information found in a typical paper chart---plus a lot more. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. An EHR may also contain other relevant information pertaining to health insurance, demographics, and even data imported from personal devices.%
+
   \subsubsection{Electronic Medical Records}
-  An electronic medical record (\textbf{EMR}) is a more limited form of health information. It contains all of the information found in a typical paper chart. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. While EMRs work well within the confines of a single practice, their utility is limited by the fact that they cannot readily travel outside that practice. In fact, a patient's EMR must often be printed and mailed or faxed in order for an outside provider to access it.
-%
+  An electronic medical record (\textbf{EMR}) is a more limited form of health information. It contains all of the information found in a typical paper chart. EHRs include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. While EMRs work well within the confines of a single practice, their utility is limited by the fact that they cannot readily travel outside that practice. In fact, a patient's EMR must often be printed and mailed or faxed in order for an outside provider to access it.%
+
 \subsection{DuraChain Model}
-The EHR is an evolution or enhanced version of the EMR. Despite the apparent movement in a positive direction, implementation and handling of EHRs still impose severe limitations. By standardizing and decentralizing this data and storing it in a ledger, a greater number of stakeholders can securely access patient data. DuraChain's approach to healthcare data places each patient and their data in their data into a room analogous to a real-life hospital visit.
-%
-The EHR represents a critical and positive shift toward better patient care and we do not intend to alter it. Instead, we insist that the data be stored in a manner that places less emphasis on the monetary value of the data.
-%
-We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity ought to be allowed to "own" the data about a patient. Through invitations and permissions-based access, multiple stakeholders in a patient's care may view and update patient records while being made aware of updates made by other parties. We term the process of receiving updates about a patient an Electronic Healthcare Event (\textbf{EHE}).
-%
+The EHR is an evolution or enhanced version of the EMR. Despite the apparent movement in a positive direction, implementation and handling of EHRs still impose severe limitations. By standardizing and decentralizing this data and storing it in a ledger, a greater number of stakeholders can securely access patient data. DuraChain's approach to healthcare data places each patient and their data in their data into a room analogous to a real-life hospital visit.%
+
+The EHR represents a critical and positive shift toward better patient care and we do not intend to alter it. Instead, we insist that the data be stored in a manner that places less emphasis on the monetary value of the data.%
+
+We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity ought to be allowed to "own" the data about a patient. Through invitations and permissions-based access, multiple stakeholders in a patient's care may view and update patient records while being made aware of updates made by other parties. We term the process of receiving updates about a patient an Electronic Healthcare Event (\textbf{EHE}).%
+
   \subsubsection{Electronic Healthcare Events}
-  An Electronic Healthcare Event (EHE) is an update to a patient’s EHR ledger. An EHE is sent to a Patient Room and once confirmed, the EHE is made visible on the patient’s ledger and an update is made to their EHR reflecting the event.
-%
-  Advances in event-based storage made by Matrix allow us to decentralize both records an conversations about a patient. This permits an unprecedented and patient-forward DME sales order life cycle process that will save time and streamline the approach for getting equipment into the patient's home in a timely manner.
-%
-  Event-based storage also scales readily, allowing for rapid, modular development and implementation of softwares beyond the DME application discussed here.
-%
+  An Electronic Healthcare Event (EHE) is an update to a patient’s EHR ledger. An EHE is sent to a Patient Room and once confirmed, the EHE is made visible on the patient’s ledger and an update is made to their EHR reflecting the event.%
+
+  Advances in event-based storage made by Matrix allow us to decentralize both records an conversations about a patient. This permits an unprecedented and patient-forward DME sales order life cycle process that will save time and streamline the approach for getting equipment into the patient's home in a timely manner.%
+
+  Event-based storage also scales readily, allowing for rapid, modular development and implementation of softwares beyond the DME application discussed here.%
+
     \paragraph{Benefits of Event-Based Distribution}
-    Using an event-based distribution model, stakeholders can interact in real time without the need to communicate with any of the centralized authorities that presently act as gatekeepers and bottlenecks. The real-time functional and spatial awareness enjoyed by all parties will lead to a greater understanding of where, when, and in what state any given sales order exists in its life cycle.
+    Using an event-based distribution model, stakeholders can interact in real time without the need to communicate with any of the centralized authorities that presently act as gatekeepers and bottlenecks. The real-time functional and spatial awareness enjoyed by all parties will lead to a greater understanding of where, when, and in what state any given sales order exists in its life cycle.%
 
-    For our present DME implementation of DLT, our chief concern is providing data about the user(s). Currently, many actors in the DLT space are only concerned with dynamic content posting---live interaction, so to speak. Healthcare, however, is an excellent example of where static content posting is still alive and well.
+    For our present DME implementation of DLT, our chief concern is providing data about the user(s). Currently, many actors in the DLT space are only concerned with dynamic content posting---live interaction, so to speak. Healthcare, however, is an excellent example of where static content posting is still alive and well.%
 
-    In this regard, our system allows for a dynamic understanding of change as it acts on ``static'' content. Cetain variables about a patient, like their name, can certainly be viewed as static. By making these variables event, though, we can track who updates what details about a patient and thus use these data to track who is active inside a patient's room at any given time. The fine granularity offered by event-based information distribution will foster a deep and improved understanding of the patient care process.
-%
+    In this regard, our system allows for a dynamic understanding of change as it acts on ``static'' content. Cetain variables about a patient, like their name, can certainly be viewed as static. By making these variables event, though, we can track who updates what details about a patient and thus use these data to track who is active inside a patient's room at any given time. The fine granularity offered by event-based information distribution will foster a deep and improved understanding of the patient care process.%
+
     \paragraph{Servers as Synapses}
-    A useful analogy to conceptualize how the network of servers pass information back and forth is to imagine each connection as a synapse (the interface between neurons) in the brain. Neurons receive a stimulus and respond to that stimulus by taking an appropriate action or simpkly passing the input ``down the line.''
-%
-    In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.
-%
+    A useful analogy to conceptualize how the network of servers pass information back and forth is to imagine each connection as a synapse (the interface between neurons) in the brain. Neurons receive a stimulus and respond to that stimulus by taking an appropriate action or simpkly passing the input ``down the line.''%
+
+    In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.%
+    %
   \subsubsection{Patient Rooms}
+  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.%
 
+  EHEs posted to the room comprise the available details about a patient. Events posted by and visible DuraChain users include:%
 
-  Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.
-%
-  EHEs posted to the room comprise the available details about a patient. Events posted by and visible DuraChain users include:
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Consider presenting the following EHEs in a table
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -161,24 +165,28 @@ We achieve this by regarding the patient as the single most important, invaluabl
   mobilePhone,\\ 
   homeAddress\\
   }
-  }
-%
+  }%
+
   \subsubsection{Users}
-  The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.
+  The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.%
 %
   \paragraph{Administration}
-  Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.
+  Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
 
-  \textit{\textbf{N.B.: It seems nontrivial that only one user type is expounded upon in this section.}}
-%
+  \textit{\textbf{N.B.: It seems nontrivial that only one user type is expounded upon in this section.}}%
+
   %\paragraph{Sales Representative}
   % Sales Representative is a certified Assistive Technology Professional (ATP) through Resna which allows them to complete the necessary forms for patients. These users will be in-charge of higher tier facilities in their area and be able to create a Patient Room when appropriate. These users will be able to post EHEs to a patient’s EHR ledger & perform many of the tasks available within the Patient Room.
-%
+
   %\paragraph{Overlay Representative}
   %An Overlay Representative is a less experienced version of a Sales Representative. They will often take lower tier facilities in the area and works with less complicated DME. They will have a Sales Representative who will be working with them that will need to confirm any EHEs they may post to a a patient’s EHR ledger. As they progress and become ATP certified, these users end up becoming Sales Representatives.
-%
+
 \subsubsection{Facilities}
-To better navigate the vast amount of patients rooms that will be created on the network, we are utilizing the Group function built into the Matrix protocol to be able to organize Patients by facility. A user who is responsible for managing facilities and patients within said facility can add Patient Rooms to a facility for better organization of the patients and a more streamline approach to understanding our UXUI. It is our goal with our software to not only reimagine how EHRs can be handled and stored, but as well as providing a balance with the most approachable UXUI in the industry. By providing the facility function, patients are organized in a way so that the people who need to quickly sort through the patients they’re working with can do so.
+In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the Group function that is built into the Matrix protocol. This allows patients to be organized into groups associated with the facilities that care for and service them. The user who is responsible for managing a facility and its patient can create patient 
+
+
+
+ A user who is responsible for managing facilities and patients within said facility can add Patient Rooms to a facility for better organization of the patients and a more streamline approach to understanding our UXUI. It is our goal with our software to not only reimagine how EHRs can be handled and stored, but as well as providing a balance with the most approachable UXUI in the industry. By providing the facility function, patients are organized in a way so that the people who need to quickly sort through the patients they’re working with can do so.
 %
 \subsection{implementation}
 Implementation of the DuraChain environment will require participation by providers of DME, whom will be our main client base. In-order to properly bring a client into our environment, they must have a copy of our server installed and properly attached to their domain. From there, they can access our environment through our custom-built UI and begin creating Patient Rooms. In-order to join an already created patient room, they must be invited to that room by someone with credentials inside of that room to do so.
