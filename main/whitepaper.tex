@@ -311,8 +311,8 @@ Notably, we do not perceive vendors of other forms of decnetralized technology a
   The patient documentation system often contains duplicates, however. Search criteria are limited to \texttt{orderNumber}, \texttt{firstName}, and \texttt{lastName} of the patient. The Lazarus UI is also outdated, having been created sometime before 2010. The UI only allows a single user access a patient file at a time, imposing severe constraints on efficiency. Integration is limited and implementation can take from 6 to 12 months for each DME provider.%
 
   \subsubsection{Iboss}
-  Iboss is an inventory system for DME providers. They store products via serial number and track each item by manufacturer item number. They don’t, however, pair well with other software solutions necessary for the target market, such as not inputing inventory into Lazarus. Like most of the software currently available there is an issue with duplication and time for implementation. Additionally, this system only allows search by serial number. Since the system is mostly removed from other software, this makes tracking the inventory associated with a patient more difficult.
-%
+  Iboss is an inventory system for DME providers. It stores products via serial number and tracks each item by manufacturer SKU, but search criteria are limited to serial numbers. Integration with other solutions required by DME providers is limited. For example, Iboss cannot export inventory data to Lazarus. Since Iboss exists in relative isolation to other DME software products, tracking inventory associated with a patient is difficult.%
+  
   \subsubsection{Domo}
   Domo is a data reporting company that has found great success, raising nearly \$700M in seven years. They have internal messaging, app stores to purchase cards, and a nicely designed front-end client for browsers. They suffer from less that 100\% reporting and a slow system (graphs don’t populate properly when launch). Additionally, they have a steep fee for usage of \$83 per user per month, which adds up quickly in a market where one-hundred field representatives isn’t an unrealistic number of users.
 %
