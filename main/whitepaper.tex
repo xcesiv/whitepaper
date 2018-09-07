@@ -15,6 +15,8 @@
 % notes
 %
 \documentclass[letterpaper]{article}
+\usepackage{setspace}
+\doublespacing
 \usepackage{geometry}
 \usepackage[printwatermark]{xwatermark}
 \usepackage{xcolor}
@@ -144,7 +146,7 @@ We achieve this by regarding the patient as the single most important, invaluabl
   \subsubsection{Patient Rooms}
   Patients are added to the software through the creation of a room dedicated to that patient. EHEs will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.%
 
-  EHEs posted to the room comprise the available details about a patient. Events posted by and visible DuraChain users include:%
+  EHEs posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain users include:%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Consider presenting the following EHEs in a table
@@ -172,8 +174,9 @@ We achieve this by regarding the patient as the single most important, invaluabl
 %
   \paragraph{Administration}
   Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
-
+  \footnote{
   \textit{\textbf{N.B.}: It seems nontrivial that only one user type is mentioned in this section.}%
+  }
 
   %\paragraph{Sales Representative}
   % Sales Representative is a certified Assistive Technology Professional (ATP) through Resna which allows them to complete the necessary forms for patients. These users will be in-charge of higher tier facilities in their area and be able to create a Patient Room when appropriate. These users will be able to post EHEs to a patient’s EHR ledger & perform many of the tasks available within the Patient Room.
@@ -182,7 +185,13 @@ We achieve this by regarding the patient as the single most important, invaluabl
   %An Overlay Representative is a less experienced version of a Sales Representative. They will often take lower tier facilities in the area and works with less complicated DME. They will have a Sales Representative who will be working with them that will need to confirm any EHEs they may post to a a patient’s EHR ledger. As they progress and become ATP certified, these users end up becoming Sales Representatives.
 
 \subsubsection{Facilities and Groups of Patients}
-\textit{\textbf{N.B.}: The notion of a ``room'' in Matrix is an abastract representation of a physical space in which users interact. Despite this abstraction, the concept is rather transparent.%
+Goals for our software extend beyond a reimagination of how EHRs are handled and stored. We also aim to balance these novel data protocols with the most approachable and intuitive UXUI in the indsutry. To this end, the software allows healthcare facilities to organize and group their patients in a way that allows for facility users to quickly sort through patients they care for.%
+
+In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built-in Group function of the Matrix protocol. This allows patients to be organized according to the facilities that care for and service them.%
+
+A user who is responsible for managing patients within a facility has the ability to create a new Patient Room---if the patient does not yet have one---and associate it with the facility's group(s). Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our UXUI ensures a streamlined approach to this functionality.%
+\footnote{
+\textbf{N.B.}: The notion of a ``room'' in Matrix is an abastract representation of a physical space in which users interact. Despite this abstraction, the concept is rather transparent.%
 
 By constrast, the use of the term ``facility'' is rather opaque and difficult to abstract from a brick-and-mortar location. It is directly challeneged by the fact that the implementation described here inverts the traditional understanding of who does what where: healthcare functionaries belonging to a facility ``visit'' the patient (by entering their room and writing an entry in the ledger). This is reminiscent of the house calls performed by general practicioners in years past.%
 
@@ -190,14 +199,8 @@ Following on from this, the term ``facility'' fails to intuitively capture the g
 
 Consider retooling the nomenclature here to a paradigm that will be more intuitive for the users, clients, customers, and other stakeholders that you expect to adopt DuraChain.%
 
-(Resonating with the notion of a house call, consider calling non-patient, non-DuraChain users ``Providers'' or a similarly abstract name. In this fashion, a Provider could encompass physicians writing scripts for DME, the various intermediaries involved in producing, acquiring, and delivering such equipment, insurance providers, and, eventually, a host of other stakeholders in the patient's care (\textnormal{e.g.,} pharmacies, research/trial physicians, family members, legal professionals, courts, counselors, laboratories, etc.) Such a name change has the added benefit of allowing DuraChain to position/brand/pitch the technology as eminently patient-first since all of the stakeholders in a patient's care must come to the patient and have permission to do so.}%
-
-Goals for our software extend beyond a reimagination of how EHRs are handled and stored. We also aim to balance these novel data protocols with the most approachable and intuitive UXUI in the indsutry. To this end, the software allows healthcare facilities to organize and group their patients in a way that allows for facility users to quickly sort through patients they care for.%
-
-In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built-in Group function of the Matrix protocol. This allows patients to be organized according to the facilities that care for and service them.%
-
-A user who is responsible for managing patients within a facility has the ability to create a new Patient Room---if the patient does not yet have one---and associate it with the facility's group(s). Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our UXUI ensures a streamlined approach to this functionality.%
-
+(Resonating with the notion of a house call, consider calling non-patient, non-DuraChain users ``Providers'' or a similarly abstract name. In this fashion, a Provider could encompass physicians writing scripts for DME, the various intermediaries involved in producing, acquiring, and delivering such equipment, insurance providers, and, eventually, a host of other stakeholders in the patient's care (\textnormal{e.g.,} pharmacies, research/trial physicians, family members, legal professionals, courts, counselors, laboratories, etc.) Such a name change has the added benefit of allowing DuraChain to position/brand/pitch the technology as eminently patient-first since all of the stakeholders in a patient's care must come to the patient and have permission to do so.
+}
  \subsection{Implementation}
  Successful implementation of the DuraChain environment requires active adoption and participation by DME providers, who constitute our main client base.%
 
@@ -282,8 +285,11 @@ As mentioned above, DME providers are currently paying \%5,000-15,000 per month 
   This class of provider spends over \$10,000 per month on software to track sales orders, generate and transmit documentation, and bill to insurance carriers.%
 
   \subsubsection{\$25-60,00,000 Gross Revenue}
-  \textit{\textbf{N.B.}: This section deviates from the pattern established above. Instead of relating any defining characteristics about a DME provier in this revenue bracket, the provided copy focuses solely on monthly outlay and software usage. Please provide one or more additional factoids.}
-  DME providers in this revenue bracket are more or less at the top of the food chain. They tend to:%
+  DME providers in this revenue bracket
+  \footnote{
+    \textit{\textbf{N.B.}: This section deviates from the pattern established above. Instead of relating any defining characteristics about a DME provier in this revenue bracket, the provided copy focuses solely on monthly outlay and software usage. Please provide one or more additional factoids.}
+  }
+  are more or less at the top of the food chain. They tend to:%
   \begin{itemize}
     \item license 5 to 8 programs for daily use;
     \item
@@ -342,7 +348,12 @@ We believe that success in this goal hinges on placing as much power as possible
 
 \begin{center}
 \textbf{ACKNOWLEDGEMENTS ABOUT HERE}
+\end{center}
+\begin{center}
 \textbf{APPENDICES ABOUT HERE}
+\end{center}
+\begin{center}
 \textbf{BIBLIOGRAPHY ABOUT HERE}
 \end{center}
+
 \end{document}

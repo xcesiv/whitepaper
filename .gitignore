@@ -64,7 +64,7 @@ typings/
 .DS_Store
 
 # PDF docs
-.pdf
+# .pdf
 
 # LaTeX aux files
 .synctex.gz
