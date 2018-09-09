@@ -2,9 +2,11 @@
 \begin{document}
 
 \tabulinesep=2mm
-\begin{tabu} to \linewidth {|X[-6,l]|[1pt]X[-4.5,c]|[1pt]X[-2.5,c]|X[-3.5,c]|X[-2.5,c]|X[-3,c]|X[-4,c]|}
+  \taburulecolor |{black}|{black} \arrayrulewidth=1pt
+\begin{tabu} to \linewidth {|X[-6,l]|X[-4.5,c]|X[-2.5,c]|X[-3.5,c]|X[-2.5,c]|X[-3,c]|X[-4,c]|}
+
   \cline{2-7}
- \multicolumn{1}{c}{} & \multicolumn{6}{|c|}{\textbf{Company}} \\ \cline{2-7} \hline
+ \multicolumn{1}{c|}{} & \multicolumn{6}{c|}{\textbf{Company}} \\ \cline{2-7} \hline
  \textbf{Feature} & DuraChain & Domo & Health Splash & Iboss & Lazarus & Brightree \\ \hline
 {Bill to Insurance} & \cmark & \xmark & \xmark & \xmark & \xmark & \cmark \\ \hline
 {Patient Documentation} & \cmark & \xmark & \cmark & \xmark & \cmark & \cmark \\ \hline
