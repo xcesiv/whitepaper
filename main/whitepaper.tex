@@ -14,14 +14,14 @@
 % with a wide right margin for editor's
 % notes
 %
-\documentclass[letterpaper]{article}
-\usepackage{setspace}
-\doublespacing
-\usepackage{geometry}
-\usepackage[printwatermark]{xwatermark}
-\usepackage{xcolor}
-\usepackage{graphicx}
-  \newwatermark[allpages,color=gray!20,angle=60,scale=3.5,xpos=0,ypos=0]{DRAFT COPY}
+%\documentclass[letterpaper]{article}
+%\usepackage{setspace}
+%\doublespacing
+%\usepackage{geometry}
+%\usepackage[printwatermark]{xwatermark}
+%\usepackage{xcolor}
+%\usepackage{graphicx}
+%  \newwatermark[allpages,color=gray!20,angle=60,scale=3.5,xpos=0,ypos=0]{DRAFT COPY}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -30,29 +30,43 @@
 % JOURNAL MODE
 % The following line is for publication and produces
 % two columns of single-spaced text
-%\documentclass[twocolumn,pre,floats,aps,amsmath,amssymb]{revtex4}
-%
+\documentclass[10pt]{article}
+% wide margins
+\addtolength{\oddsidemargin}{-.75in}
+\addtolength{\evensidemargin}{-.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.875in}
+\addtolength{\textheight}{1.75in}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % PACKAGE INVOCATIONS
-\usepackage{graphicx}
-\usepackage{bm}
+\usepackage{wpStyle}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%\title{DuraChain: A Decentralized Electronic Healthcare Event Environment}
-%\author{Brandon JP Scott}
-%\affiliation{Chief Technology Officer, DuraChain, LLC}
-% contact info here
-%\date{\today}
+\subfile{../title/title-page}
 
-%\begin{abstract}
-%This paper outlines a practical application of an Electronic Healthcare Event environment developed for the providers of Durable Medical Equipment to be able to more efficiently provide care to their patients and get them the equipment that they need sooner. Additionally, we will be providing the details of how Electronic Healthcare Events can be developed to expand beyond the DME industry and make an impact throughout healthcare. It is the intent of this paper to showcase what EHEs can do for Healthcare if deployed properly and provided the right tools to implement them.
-%\end{abstract}
+\title{ \textbf{DuraChain: A Decentralized Electronic Healthcare Event Environment} }
+\author{Brandon JP Scott\\
+\textit{Chief Technology Officer}\\ \href{durchain.io}{\texttt{DuraChain.io}}}
 
-%\maketitle
+\date{\today}
+\maketitle
+
+\begin{abstract}
+
+This paper outlines a practical application of an Electronic Healthcare Event environment developed for the providers of Durable Medical Equipment to be able to more efficiently provide care to their patients and get them the equipment that they need sooner. Additionally, we will be providing the details of how Electronic Healthcare Events can be developed to expand beyond the DME industry and make an impact throughout healthcare. It is the intent of this paper to showcase what EHEs can do for Healthcare if deployed properly and provided the right tools to implement them. \\\\
+\textsc{Keywords: k1, k2, k3, k4, k5, k6}
+\end{abstract}
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
 
 \section{Introduction}
 We describe DuraChain, a decentralized electronic healthcare event (\textbf{EHE}) environment. Using the Matrix protocol,
@@ -67,7 +81,7 @@ Many DME providers use five or more separate softwares that suffer from poor in
 Thus, we believe that an adequate implementation of patient-first technology that simultaneously addresses the needs of HCOs and patient requires a wholesale rethinking of patient data management so as to make it accessible to those parties who can rapidly impact the market.%
 
 \subsection{Solution}
-We believe that the confounds lay in the ongoing trend toward patient-focused technology. (A prime example is the increasing frequency with which health systems are adopting "patient portals," which are almost universally slow and lacking elegant, intuitive design.) Far from believing that a patient should not have ready access and control over their health data, we argue that such an aim requires that technology for the stakeholders who routinely access, maintain, and transmit such information improves first.%
+We believe that the confounds lay in the ongoing trend toward patient-focused technology. (A prime example is the increasing frequency with which health systems are adopting ``patient portals,'' which are almost universally slow and lacking elegant, intuitive design.) Far from believing that a patient should not have ready access and control over their health data, we argue that such an aim requires that technology for the stakeholders who routinely access, maintain, and transmit such information improves first.%
 
 Indeed, this technology is doomed to fail if conceived and developed in a vacuum; the needs of the patient must be front-of-mind; our solution stems from an approach that focuses on the provider and generates, updates, and transmits a patient's profile in a virtual representation of an exam room. Implementation of the Matrix protocol securely decentralizes patient data while offering an intuitive remedy to well-documented user interface issues in healthcare technology (HCT).%
 
@@ -148,26 +162,7 @@ We achieve this by regarding the patient as the single most important, invaluabl
 
   EHEs posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain users include:%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Consider presenting the following EHEs in a table
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \texttt{
-  {\\
-  firstName,\\
-  middleName,\\
-  lastName,\\
-  primaryInsProvider,\\
-  primaryInsIdentifier,\\ 
-  secondaryInsProvider,\\ 
-  secondaryInsIdentifier,\\ 
-  height,\\ 
-  weight,\\ 
-  gender,\\ 
-  homePhone,\\ 
-  mobilePhone,\\ 
-  homeAddress\\
-  }
-  }%
+\subfile{../tab/ehe}
 
   \subsubsection{Users}
   The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.%
@@ -298,6 +293,8 @@ As mentioned above, DME providers are currently paying \%5,000-15,000 per month 
   DME providers in this top bracket can expect to pay \$20,000 or more per month for software that barely allows them to maintain stable sales and production levels.%
 
   Because of the extensive use of software in this bracket, human error is greatly reduced, but these providers also routinely suffer from data loss as workflow moves between softwares.%
+
+\subfile{../tab/table-1}
 
 \subsection{Competition}
 Given the unique nature of DuraChain's solution, it is hard to identify any single entity that directly intersects with the full range of what we offer. Generally speaking, we view our closest competitors as software companies broadly specializing in healthcare data or with a particular emphasis on DME.%

@@ -1,0 +1,18 @@
+# Fdb version 3
+["pdflatex"] 1536452912 "table-1.tex" "table-1.pdf" "table-1" 1536452912
+  "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1480098733 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls" 1523050425 19823 fcbc01552b07b608574cbf8e1977e0c0 ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo" 1523050425 8294 b0f177401f895563eb19304d2389582d ""
+  "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
+  "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1535807533 2886081 84bf1cad908d153dd8cb9617fc1fec2b ""
+  "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1535807560 4221276 70afc35732ddc9dad0462f2f2684f835 ""
+  "/usr/local/texlive/2018/texmf.cnf" 1535807523 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
+  "table-1.aux" 1536452912 8 a94a2480d3289e625eea47cd1b285758 ""
+  "table-1.tex" 1536452731 1726 e8acf2cdeb6dc58c5c09c99bc6e630c1 ""
+  (generated)
+  "table-1.aux"
+  "table-1.pdf"
+  "table-1.log"

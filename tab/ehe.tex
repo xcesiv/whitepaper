@@ -1,0 +1,22 @@
+\documentclass[whitepaper.tex]{subfiles}
+
+
+
+\tabulinesep=2mm
+\begin{tabu} to \linewidth
+  {|X[-2,l]|X[-2,c]|X[-2,c]|X[-2,c]|}
+\cline{2-4}
+\multicolumn{1}{c}{} & \multicolumn{3}{|c|}{\textbf{Electronic Healthcare Events}} \\ \cline{2-4} \hline
+\rowcolor{gray!20}
+Patient Name & \texttt{firstName} & \texttt{middleName} & \texttt{lastName} \\ \hline
+Contact Information & \texttt{homePhone} & \texttt{mobilePhone} & \texttt{homeAddress} \\ \hline
+\rowcolor{gray!20}
+Primary Insurance & \texttt{primaryInsProvider} & \texttt{primaryInsContract} & \texttt{primaryInsGroup} \\ \hline
+Secondary Insurance & \texttt{secondaryInsProvider} & \texttt{secondaryInsContract} & \texttt{secondaryInsGroup}\\ \hline
+\rowcolor{gray!20}
+Basic Info & \texttt{height} & \texttt{weight} & \texttt{gender} \\ \hline
+\multicolumn{4}{|c|}{\textbf{Possible Events for Future Inclusion}} \\ \hline
+\rowcolor{gray!20}
+Diagnosis & \texttt{dsmCode} & \texttt{icdCode} & \\ \hline
+Billing & \texttt{cptCode} & & \\ \hline
+\end{tabu}

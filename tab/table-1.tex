@@ -1,15 +1,11 @@
-\documentclass[letterpaper]{article}
-\usepackage{tabu}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{amssymb}% http://ctan.org/pkg/amssymb
-\usepackage{pifont}% http://ctan.org/pkg/pifont
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
-
+\documentclass[whitepaper.tex]{subfiles}
 \begin{document}
+
 \tabulinesep=2mm
-\begin{tabu} to \linewidth {|X[-2.5,l]|[3pt]X[-2.5,c]|[3pt]X[-2.5,c]|X[-2.5,c]|X[-2.5,c]|X[-2.5,c]|X[-2.5,c]|}
-{Feature} & DuraChain & Domo & Health Splash & Iboss & Lazarus & Brightree \\ \hline
+\begin{tabu} to \linewidth {|X[-6,l]|[1pt]X[-4.5,c]|[1pt]X[-2.5,c]|X[-3.5,c]|X[-2.5,c]|X[-3,c]|X[-4,c]|}
+  \cline{2-7}
+ \multicolumn{1}{c}{} & \multicolumn{6}{|c|}{\textbf{Company}} \\ \cline{2-7} \hline
+ \textbf{Feature} & DuraChain & Domo & Health Splash & Iboss & Lazarus & Brightree \\ \hline
 {Bill to Insurance} & \cmark & \xmark & \xmark & \xmark & \xmark & \cmark \\ \hline
 {Patient Documentation} & \cmark & \xmark & \cmark & \xmark & \cmark & \cmark \\ \hline
 {Reporting} & \cmark & \cmark & \xmark & \xmark & \xmark & \xmark \\ \hline
@@ -23,6 +19,5 @@
 {Rapid Implementation} & \cmark & \xmark & \xmark & \xmark & \xmark & \xmark \\ \hline
 {Insurance Verification} & \cmark & \xmark & \xmark & \xmark & \cmark & \cmark \\ \hline
 \end{tabu}
-
 
 \end{document}
