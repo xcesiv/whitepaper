@@ -1,4 +1,4 @@
-\ProvidesPackage{wpStyle}
+\ProvidesPackage{durachainWP}
 
 \usepackage{subfiles}
 \usepackage[table,xcdraw]{xcolor}
@@ -7,16 +7,16 @@
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage[pages=some]{background}
-\backgroundsetup{
-scale=.85,
-color=black,
-opacity=0.25,
-angle=35,
-contents={%
-  \includegraphics[width=\paperwidth,
-  height=\paperheight]{./subfiles/img/logo}
-  }%
-}
+    \backgroundsetup{
+    scale=.85,
+    color=black,
+    opacity=0.25,
+    angle=35,
+    contents={%
+        \includegraphics[width=\paperwidth,
+        height=\paperheight]{./subfiles/img/logo}
+        }%
+    }
 \usepackage{hyperref}
     \hypersetup{
     bookmarks=true, % show bookmarks bar?
@@ -38,6 +38,16 @@ contents={%
     filecolor=magenta, % color of file links
     urlcolor=gray % color of external links
     }
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+        \renewcommand{\headrulewidth}{2pt}
+        \fancyhead[r]{Last Updated \hspace{.25em} \today}
+        \fancyhead[l]{}
+        %\footskip = 1.5in
+        \fancyfoot[c]{\copyright \hspace{.25em} DuraChain, LLC}
+        \fancyfoot[r]{\thepage}
+        \fancyfoot[l]{\includegraphics[scale=0.005]{./subfiles/img/logo}}
+
 \usepackage{cite}
 \usepackage{amsmath}
 \usepackage{enumitem}
