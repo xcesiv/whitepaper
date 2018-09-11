@@ -1,8 +1,8 @@
 
-
+\vspace{5em}
 \tabulinesep=2mm
 \taburulecolor |{black}|{black} \arrayrulewidth=1pt
-\begin{tabu} to \linewidth
+\begin{longtabu} to \linewidth
   {|X[-2,l]|X[-2,c]|X[-2,c]|X[-2,c]|}
 \cline{2-4}
 \multicolumn{1}{c}{} & \multicolumn{3}{|c|}{\textbf{Electronic Healthcare Events}} \\ \cline{2-4} \hline
@@ -18,4 +18,6 @@ Basic Info & \texttt{height} & \texttt{weight} & \texttt{gender} \\ \hline
 \rowcolor{gray!20}
 Diagnosis & \texttt{dsmCode} & \texttt{icdCode} & \\ \hline
 Billing & \texttt{cptCode} & & \\ \hline
-\end{tabu}
+\caption{Electronic Healthcare Events write data to the \textsc{ehr} contained within a Patient Room. This table shows \textsc{ehe}s currently implemented in DuraChain as well other events that may implemented in future iterations.}
+\label{tab:ehe}
+\end{longtabu}

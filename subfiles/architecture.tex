@@ -42,15 +42,31 @@ We achieve this by regarding the patient as the single most important, invaluabl
   \subsubsection{Patient Rooms}
   Patients are added to the software through the creation of a room dedicated to that patient. \textsc{ehe}s will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.%
 
-  \textsc{ehe}s posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain users include:%
+  \textsc{ehe}s posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain include those listed below in table \ref{tab:ehe}:%
 
 \input{./subfiles/tables/ehe}
 
   \subsubsection{Users}
   The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a Patient Room.%
 
-  \paragraph{Administration}
-  Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
+  $( Provider + Practitioner + Technician + Sales Representative ) = Patient Room $
+
+  \paragraph{System Administrator---Level 0}
+  This user group is the root level access user group that designs, updates, and iterates the code that powers the application UXUIs and the servers installed (essentially like a node).
+
+  \paragraph{Facility Administrators---Level 1)}
+  This user group is comprised of the leadership of the organizations outside of DuraChain who handle patient data on a global scale. A few example organizational types may include: Healthcare Organizations, DME Suppliers, and Insurance Providers.
+
+  \paragraph{]Provider/Practitioner Professional I---Level 2}:
+  This user group is comprised of primary Licensed Medical Professionals such as Medical Doctors, Psychiatrists, or other professionals who may issue prescriptions or recommendations for medical equipment.
+
+  \paragraph{Provider/Practitioner Professional II---Level 3}
+  This user group is comprised of secondary Licensed Medical Professionals such as Nurses or other medical professionals who help facilitate patient data for transport, this work include the Sale Representative at a DME Supplier.
+
+  \paragraph{Patients---Level 4}
+  This user group is comprised of the Patient whom the Room is dedicated to. They will be provided a separate interface to work with and interact with their Room Ledger.
+
+  %Administrative users are the engineers and developers who work on the DuraChain project. While they will not have access to any Patient Room directly, they are responsible for the development and maintenance of the source code associated with DuraChain. An administrator has no access to nor knowledge of any room they are not invited to, further doubling down on security. However, they may be invited to any Patient Room in order to roll out updates, conduct maintenance, or debug issues that arise for our clients.%
 
   %\paragraph{Sales Representative}
   % Sales Representative is a certified Assistive Technology Professional (ATP) through Resna which allows them to complete the necessary forms for patients. These users will be in-charge of higher tier facilities in their area and be able to create a Patient Room when appropriate. These users will be able to post EHEs to a patient’s EHR ledger & perform many of the tasks available within the Patient Room.

@@ -1,5 +1,13 @@
 \ProvidesPackage{durachainWP}
 
+%\usepackage{geometry}
+ %\geometry{
+ %letterpaper,
+ %left=35mm
+ %right=35mm,
+ %top=30mm,
+ %bottom=30mm
+ %}
 \usepackage{subfiles}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{tikz}
@@ -40,13 +48,15 @@
     }
 \usepackage{fancyhdr}
     \pagestyle{fancy}
-        \renewcommand{\headrulewidth}{2pt}
-        \fancyhead[r]{Last Updated \hspace{.25em} \today}
+        \renewcommand{\headrulewidth}{.4pt}
+        \fancyhead[l]{\includegraphics[height=.25in,width=.25in,angle=35]{./subfiles/img/logo}}
+        \fancyhead[r]{Last Updated \hspace{.25em}\today}
         \fancyhead[l]{}
         %\footskip = 1.5in
-        \fancyfoot[c]{\copyright \hspace{.25em} DuraChain, LLC}
-        \fancyfoot[r]{\thepage}
-        \fancyfoot[l]{\includegraphics[scale=0.005]{./subfiles/img/logo}}
+        \fancyfoot[l]{Version Number}
+        \fancyfoot[c]{\thepage}
+        \fancyfoot[r]{\hspace{.25em}\copyright \hspace{.25em}DuraChain, LLC}
+
 
 \usepackage{cite}
 \usepackage{amsmath}
@@ -54,6 +64,7 @@
 \usepackage{bm}
 \usepackage{parskip}
 \usepackage{tabu}
+\usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}\cellcolor{gray!20}}%
