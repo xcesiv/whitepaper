@@ -7,36 +7,37 @@
 \BOOKMARK [2][-]{subsection.2.2}{Distributed Ledger Technology}{section.2}% 7
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Misconceptions}{subsection.2.2}% 8
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Importance}{subsection.2.2}% 9
-\BOOKMARK [1][-]{section.3}{Architecture}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{Current Model}{section.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Electronic Healthcare Records}{subsection.3.1}% 12
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Electronic Medical Records}{subsection.3.1}% 13
-\BOOKMARK [2][-]{subsection.3.2}{DuraChain Model}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Electronic Healthcare Events}{subsection.3.2}% 15
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Patient Rooms}{subsection.3.2}% 16
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Users}{subsection.3.2}% 17
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Facilities and Groups of Patients}{subsection.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.3}{Implementation}{section.3}% 19
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Protected Health Information}{subsection.3.3}% 20
-\BOOKMARK [1][-]{section.4}{UXUI}{}% 21
-\BOOKMARK [2][-]{subsection.4.1}{UXUI Overhaul}{section.4}% 22
-\BOOKMARK [2][-]{subsection.4.2}{Accessibility}{section.4}% 23
-\BOOKMARK [2][-]{subsection.4.3}{Implementation}{section.4}% 24
-\BOOKMARK [1][-]{section.5}{Market}{}% 25
-\BOOKMARK [2][-]{subsection.5.1}{Target Market}{section.5}% 26
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Needs and Wants}{subsection.5.1}% 27
-\BOOKMARK [3][-]{subsubsection.5.1.2}{DME Provider Groups}{subsection.5.1}% 28
-\BOOKMARK [3][-]{subsubsection.5.1.3}{\0440-5,000,000 Gross Revenue}{subsection.5.1}% 29
-\BOOKMARK [3][-]{subsubsection.5.1.4}{\04410-20,000,000 Gross Revenue}{subsection.5.1}% 30
-\BOOKMARK [3][-]{subsubsection.5.1.5}{\04425-60,00,000 Gross Revenue}{subsection.5.1}% 31
-\BOOKMARK [2][-]{subsection.5.2}{Competition}{section.5}% 32
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Brightree}{subsection.5.2}% 33
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Lazarus}{subsection.5.2}% 34
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Iboss}{subsection.5.2}% 35
-\BOOKMARK [3][-]{subsubsection.5.2.4}{Domo}{subsection.5.2}% 36
-\BOOKMARK [3][-]{subsubsection.5.2.5}{Health Splash}{subsection.5.2}% 37
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 38
-\BOOKMARK [2][-]{subsection.6.1}{Next Steps}{section.6}% 39
-\BOOKMARK [2][-]{subsection.6.2}{Future}{section.6}% 40
-\BOOKMARK [1][-]{section.7}{Acknowledgements}{}% 41
-\BOOKMARK [1][-]{section.8}{Appendix}{}% 42
+\BOOKMARK [1][-]{section.3}{Combining dme and dlt}{}% 10
+\BOOKMARK [1][-]{section.4}{Architecture}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Current Model}{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Electronic Healthcare Records}{subsection.4.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Electronic Medical Records}{subsection.4.1}% 14
+\BOOKMARK [2][-]{subsection.4.2}{DuraChain Model}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Electronic Healthcare Events}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Patient Rooms}{subsection.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Users}{subsection.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Facilities and Groups of Patients}{subsection.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.3}{Implementation}{section.4}% 20
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Protected Health Information}{subsection.4.3}% 21
+\BOOKMARK [1][-]{section.5}{UXUI}{}% 22
+\BOOKMARK [2][-]{subsection.5.1}{UXUI Overhaul}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.2}{Accessibility}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.3}{Implementation}{section.5}% 25
+\BOOKMARK [1][-]{section.6}{Market}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{Target Market}{section.6}% 27
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Needs and Wants}{subsection.6.1}% 28
+\BOOKMARK [3][-]{subsubsection.6.1.2}{DME Provider Groups}{subsection.6.1}% 29
+\BOOKMARK [3][-]{subsubsection.6.1.3}{\0440-5,000,000 Gross Revenue}{subsection.6.1}% 30
+\BOOKMARK [3][-]{subsubsection.6.1.4}{\04410-20,000,000 Gross Revenue}{subsection.6.1}% 31
+\BOOKMARK [3][-]{subsubsection.6.1.5}{\04425-60,00,000 Gross Revenue}{subsection.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.2}{Competition}{section.6}% 33
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Brightree}{subsection.6.2}% 34
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Lazarus}{subsection.6.2}% 35
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Iboss}{subsection.6.2}% 36
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Domo}{subsection.6.2}% 37
+\BOOKMARK [3][-]{subsubsection.6.2.5}{Health Splash}{subsection.6.2}% 38
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 39
+\BOOKMARK [2][-]{subsection.7.1}{Next Steps}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.2}{Future}{section.7}% 41
+\BOOKMARK [1][-]{section.8}{Acknowledgements}{}% 42
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 43
