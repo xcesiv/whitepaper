@@ -8,20 +8,21 @@ To accomplish these objectives, we have carefully considered the precise target 
 The most common methods of maintaining a database of patient records are the electronic healthcare record (\textsc{ehr}) and the electronic medical record (\textsc{emr}). Both \textsc{ehr} and \textsc{emr} are centralized collections of data pertaining to an individual patient. They may be centralized to a particular system or a single healthcare practice.%
 
   \subsubsection{Electronic Healthcare Records}
-  An electronic health record (\textsc{ehr3}) is a digital record of health information. It contains all of the information found in a typical paper chart---plus a lot more. \textsc{ehr}s include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. An \textsc{ehr} may also contain other relevant information pertaining to health insurance, demographics, and even data imported from personal devices.\cite{EMRvsEHR}%
+  An electronic health record (\textsc{ehr}) is a digital record of health information. It contains all of the information found in a typical paper chart---plus a lot more. \textsc{ehr}s include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. An \textsc{ehr} may also contain other relevant information pertaining to health insurance, demographics, and even data imported from personal devices.\cite{EMRvsEHR}%
 
   \subsubsection{Electronic Medical Records}
   An electronic medical record (\textsc{emr}) is a more limited form of health information. It contains all of the information found in a typical paper chart. \textsc{emr}s include medical history, vital signs, progress notes, diagnoses, prescribed medications, immunization dates, allergies, lab orders and results, and medical imaging data. While \textsc{emr}s work well within the confines of a single practice, their utility is limited by the fact that they cannot readily travel outside that practice. In fact, a patient's \textsc{emr} must often be printed and mailed or faxed in order for an outside provider to access it.\cite{EMRvsEHR}%
 
 \subsection{DuraChain Model}
-The \textsc{ehr} is an enhanced version of the \textsc{emr}. Despite the apparent movement in a positive direction, implementation and handling of \textsc{ehr}s still impose severe limitations.\cite{palmaEHR} By standardizing and decentralizing this data and storing it in a ledger, a greater number of stakeholders can securely access patient data. DuraChain's approach to healthcare data places each patient and their data in their data into a room analogous to a real-life hospital visit.%
+The \textsc{ehr} is an enhanced version of the \textsc{emr}. Despite the apparent movement in a positive direction, implementation and handling of \textsc{ehr}s still impose severe limitations.\cite{palmaEHR} By standardizing this data and displaying it on a decentralized ledger, a greater number of stakeholders can securely access patient data. DuraChain’s approach to data represents each patient and their data in a room analogous to a real life hospital visit.%
 
-The \textsc{ehr} represents a critical and positive shift toward better patient care and we do not intend to alter it. Instead, we insist that the data be stored in a manner that places less emphasis on the monetary value of the data.%
+The \textsc{ehr} represents a critical and positive shift toward better patient care and we do not intend to alter it. Instead, we insist that the data be stored in a manner that places less emphasis on its monetary.%
 
-We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity ought to be allowed to ``own'' the data about a patient. Through invitations and permissions-based access, multiple stakeholders in a patient's care may view and update patient records while being made aware of updates made by other parties. We term the process of receiving updates about a patient an Electronic Healthcare Event (\textsc{ehe}).%
+We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity ought to be allowed to ``own'' the data about a patient. Through permission-based access and restriction-conscious design, multiple stakeholders in a patient’s care may view and update the patients EHR data appropriate for their position while being made aware of updates made by other parties. We term the action of recording updates to a patient’s \textsc{ehe} an Electronic Health Event (\textsc{ehe}).%
 
-  \subsubsection{Electronic Healthcare Events}
-  An Electronic Healthcare Event (\textsc{EHE}) is an update to a patient’s \textsc{ehr} ledger. An \textsc{ehe} is sent to a Patient Room and once confirmed, the \textsc{ehe} is made visible on the patient’s ledger and an update is made to their \textsc{ehe} reflecting the event.%
+  \subsubsection{Electronic Health Events}
+
+  An \textsc{ehe} is a confirmed update to a patient's \textsc{ehe} that is made by a verified user or verified by a verified user within the room. An \textsc{ehe} is recorded to the patient’s room ledger upon the completion of an 8-step action-based consensus algorithm (see diagram).%
 
   Advances in event-based storage made by Matrix allow us to decentralize both records an conversations about a patient. This permits an unprecedented and patient-forward \textsc{dme} sales order life cycle process that will save time and streamline the approach for getting equipment into the patient's home in a timely manner.%
 
@@ -34,10 +35,10 @@ We achieve this by regarding the patient as the single most important, invaluabl
 
     In this regard, our system allows for a dynamic understanding of change as it acts on ``static'' content. Certain variables about a patient, like their name, can certainly be viewed as static. By making these variables event, though, we can track who updates what details about a patient and thus use these data to track who is active inside a patient's room at any given time. The fine granularity offered by event-based information distribution will foster a deep and improved understanding of the patient care process.%
 
-    \paragraph{Servers as Synapses}
-    A useful analogy to conceptualize how the network of servers pass information back and forth is to imagine each connection as a synapse (the interface between neurons) in the brain. Neurons receive a stimulus and respond to that stimulus by taking an appropriate action or simply passing the input ``down the line.''%
+    %\paragraph{Servers as Synapses}
+    %A useful analogy to conceptualize how the network of servers pass information back and forth is to imagine each connection as a synapse (the interface between neurons) in the brain. Neurons receive a stimulus and respond to that stimulus by taking an appropriate action or simply passing the input ``down the line.''%
 
-    In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.%
+    %In our network, a server will take an event posted by a user and fire it off to the rest of the servers it shares a connection with. The collective network then provides feedback about the broadcast by confirming and posting the event. Different servers fire off events that ripple throughout network of synapses and post to common spaces to inform the other servers that they have done so.%
 
   \subsubsection{Patient Rooms}
   Patients are added to the software through the creation of a room dedicated to that patient. \textsc{ehe}s will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted EHEs and discussions about the patient necessary for users to discharge their roles.%
@@ -76,11 +77,8 @@ We achieve this by regarding the patient as the single most important, invaluabl
 
 \subsubsection{Facilities and Groups of Patients}
 Goals for our software extend beyond a reimagination of how \textsc{ehr}s are handled and stored. We also aim to balance these novel data protocols with the most approachable and intuitive \textsc{uxui} in the industry. To this end, the software allows healthcare facilities to organize and group their patients in a way that allows for facility users to quickly sort through patients they care for.%
-\begin{figure}[ht]
-\includemovie[poster,text={\small(Loading Video...)}]{6cm}{4cm}{./subfiles/img/vid-test.mov}
-\end{figure}
 
-In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built-in Group function of the Matrix protocol. This allows patients to be organized according to the facilities that care for and service them.%
+In order to promote easy navigation of the vast numbers of patient rooms that will be created, we employ the built in Matrix identifier known as Groups, which is a collection of Rooms. This allows patients to be organized according to the facilities that care for and service them.%
 
 A user who is responsible for managing patients within a facility has the ability to create a new Patient Room---if the patient does not yet have one---and associate it with the facility's group(s). Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our \textsc{uxui} ensures a streamlined approach to this functionality.%
 
