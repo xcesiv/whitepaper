@@ -64,7 +64,11 @@ typings/
 .DS_Store
 
 # PDF docs
+<<<<<<< HEAD
 # .pdf
+=======
+ .pdf
+>>>>>>> ea0e1bbe906ec99899c70f7f5441dedee6b8af65
 
 # LaTeX aux files
 .synctex.gz
