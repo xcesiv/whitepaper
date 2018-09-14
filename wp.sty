@@ -1,0 +1,71 @@
+\ProvidesPackage{durachainWP}
+
+%\usepackage{geometry}
+ %\geometry{
+ %letterpaper,
+ %left=35mm
+ %right=35mm,
+ %top=30mm,
+ %bottom=30mm
+ %}
+\usepackage{subfiles}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[pages=some]{background}
+    \backgroundsetup{
+    scale=.85,
+    color=black,
+    opacity=0.25,
+    angle=35,
+    contents={%
+        \includegraphics[width=\paperwidth,
+        height=\paperheight]{./subfiles/img/logo}
+        }%
+    }
+\usepackage{hyperref}
+    \hypersetup{
+    bookmarks=true, % show bookmarks bar?
+    unicode=false, % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true, % show Acrobat’s toolbar?
+    pdfmenubar=true, % show Acrobat’s menu?
+    pdffitwindow=false, % window fit to page when opened
+    pdfstartview={FitH}, % fits the width of the page to the window
+    pdftitle={DuraChain White Paper}, % title
+    pdfauthor={swaevior},     % author
+    pdfsubject={Electronic Healthcare Events},   % subject of the document
+    pdfcreator={xcesiv}, % creator of the document
+    pdfproducer={swaevior}, % producer of the document
+    pdfkeywords={}, % list of keywords
+    pdfnewwindow=true, % links in new window
+    colorlinks=true, % false: boxed links; true: colored links
+    linkcolor=black, % color of internal links
+    citecolor=black, % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=black % color of external links
+    }
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+        \renewcommand{\headrulewidth}{.4pt}
+        \fancyhead[l]{Version Number}
+        \fancyhead[r]{Last Updated \hspace{.25em}\today}
+        \fancyhead[l]{}
+        %\footskip = 1.5in
+        \fancyfoot[l]{\includegraphics[height=.25in,width=.25in,angle=35]{./subfiles/img/logo}}
+        \fancyfoot[c]{\thepage}
+        \fancyfoot[r]{\hspace{.25em}\copyright \hspace{.25em}DuraChain, LLC}
+
+
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{bm}
+\usepackage{parskip}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}\cellcolor{gray!20}}%
+\newcommand{\xmark}{\ding{55}\cellcolor{gray!50}}%
