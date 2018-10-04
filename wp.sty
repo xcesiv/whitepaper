@@ -48,8 +48,10 @@
     }
 \usepackage{fancyhdr}
     \pagestyle{fancy}
+    \def\whitepaperVersionNumber{unknown revision}
+    \IfFileExists{options.tex}{\input{options.tex}}
         \renewcommand{\headrulewidth}{.4pt}
-        \fancyhead[l]{Version Number}
+        \fancyhead[l]{VwhitepaperVersionNumber}
         \fancyhead[r]{Last Updated \hspace{.25em}\today}
         \fancyhead[l]{}
         %\footskip = 1.5in
