@@ -64,18 +64,10 @@ typings/
 .DS_Store
 
 # LaTeX aux files
-<<<<<<< HEAD
-*.synctex.gz*
-*.aux*
-*.fls*
-*.fdp_latexmk*
-*.log*
-=======
 *.synctex.gz
 *.aux
 *.fls
 *.fdp_latexmk
 *.log
 *.xvm
->>>>>>> develop
 whitepaper.pdf
