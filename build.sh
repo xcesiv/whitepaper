@@ -14,19 +14,18 @@ if [ -d ".git" ]; then
 SHA=`git rev-parse --short --verify HEAD`
 DATE=`git show -s --format="%cd" --date=short HEAD`
 REV="$SHA - $DATE"
-echo "\def\WhitePaperVersionNumber{$REV}" >> options.tex
+echo "\def\WhitePaperVersionNumber{$REV}" >> Options.tex
 
 fi
 
 
 if [ "$1" == "white" ]; then
 
-echo "\definecolor{pagecolor}{rgb}{1,1,1}" >> options.tex
+echo "\definecolor{pagecolor}{rgb}{1,1,1}" >> Options.tex
 
 fi
 
-echo
-"\newcommand{\WhitePaperVersionNumber}{$REV}" > version.tex
+echo "\newcommand{\WhitePaperVersionNumber}{$REV}" > CommitVersion.tex
 
 if grep '=========' whitepaper.tex
 then
