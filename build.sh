@@ -14,7 +14,7 @@ if [ -d ".git" ]; then
 SHA=`git rev-parse --short --verify HEAD`
 DATE=`git show -s --format="%cd" --date=short HEAD`
 REV="$SHA - $DATE"
-echo "\def\whitepaperVersionNumber{$REV}" >> options.tex
+echo "\def\WhitePaperVersionNumber{$REV}" >> options.tex
 
 fi
 
@@ -27,7 +27,7 @@ fi
 
 
 
-echo "\newcommand{\whitepaperVersionNumber}{$REV}" > version.tex
+echo "\newcommand{\WhitePaperVersionNumber}{$REV}" > version.tex
 
 mkdir build
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex && \
