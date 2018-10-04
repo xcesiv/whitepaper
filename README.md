@@ -52,4 +52,4 @@ Of particular note are:
 A number of other packages can improve the LaTeX experience when using Atom. These include:
 - `language-latex`, which supports syntax highlighting;
 - `latex-autocomplete`, which provides autofill options for LaTeX; and
-- `latex-worcount`, which does a decent job at estiamting document word counts.
+- `latex-wordcount`, which does a decent job at estiamting document word counts.
