@@ -7,7 +7,7 @@
 
 set -e
 
-rm -rf options.tex
+rm -rf Options.tex
 
 if [ -d ".git" ]; then
 
@@ -39,4 +39,4 @@ bibtex build/whitepaper && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex
-rm -rf options.tex
+rm -rf Options.tex
