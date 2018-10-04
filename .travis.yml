@@ -1,0 +1,29 @@
+language: latex
+sudo: required
+before_install:
+<<<<<<< HEAD
+=======
+- openssl aes-256-cbc -K $encrypted_81d85cdc1787_key -iv $encrypted_81d85cdc1787_iv
+  -in deploy_key.enc -out deploy_key -d
+>>>>>>> 822978583efbb4c4b3b68ec07bc1828d61e12ddc
+- sudo apt-get -qq update
+- sudo apt-get install texlive texlive-latex3
+- sudo apt install texlive-latex-extra
+- chmod +x build.sh
+- chmod +x travis_deploy.sh
+script:
+- "./build.sh"
+deploy:
+  provider: script
+  script: "./travis_deploy.sh"
+  skip_cleanup: true
+  on:
+    branch: master
+env:
+  global:
+    - secure: lQ4pEjPmnsqvDu4leNzBq39/rNjr25c/LZtBbZkPy0nNJ0Xp3SxyhcblgKc/NRtpkyrggAs41XMlCperBEmce7ab7668PfgB8y52A+e2C2HxUBvtUe/QrIimpErBOxqNKRk7veCbLYoHsonOF4IvkMXVKigsPUkmpU7BOLDhHiGP4hm0o2ftBOXb7M3hI7CXqMCztHzl/L8UZ1yg6q8B2gdbFqAJgbT2m2P1nPT95hHmr3uERSOnhwCoSNrIVBEGru0nSv5/wz7e9vbk6LZoZsTt9V5cFPtQjA9CxZcRlXf3cmaRioIQaqD5ZGUqtuVUKVODjVnVu+kfPYcDCIpRgrP/K8lTS34Cd/3G4V91m5Pmq1T7JohBjKeufN1Ol1pF4xMHR1jNI/3lRWCsYOoR71JlbSvhn1gYHAAj/F2gIuAnL16ylUUdiISGcXKQLvKMCm++lezLueiYvc4NVEPmjnNqxcqyEKuuKnaZUGlZh0M54UvqjXhxVrQAUGkOtAzXZnzSQmtBIz8BQVK+tpQw9FoDZrJkGkuCUgXD1sOsB3Nq5GVsGcjTwhMrsct6Op6LljeNH2KRZn2v6LO7Rc+SIQpexAXdnAzsg3MQpbp3h4MdJuRf1lTU8IH06jJa45AV63SfTgLxPTw2pEhLhgvt0CDNgUeBKjmd25F3LpEJj/o=
+
+    - ENCRYPTION_LABEL="81d85cdc1787"
+    - COMMIT_AUTHOR_EMAIL="xcesivio@gmail.com"
+    - COMMIT_AUTHOR="xcesiv"
+    - PUSH_REPO="git@github.com:durachain:whitepaper.git"
