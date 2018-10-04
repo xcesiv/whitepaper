@@ -64,9 +64,10 @@ typings/
 .DS_Store
 
 # LaTeX aux files
-*.synctex.gz*
-*.aux*
-*.fls*
-*.fdp_latexmk*
-*.log*
+*.synctex.gz
+*.aux
+*.fls
+*.fdp_latexmk
+*.log
+*.xvm
 whitepaper.pdf
