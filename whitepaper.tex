@@ -8,10 +8,12 @@
 \addtolength{\textheight}{1.75in}
 
 % Invoke white paper style
+\input{CommitVersion.tex}
+\IfFileExists{Options.tex}{\input{Options.tex}}
 \usepackage{wp}
 
-\begin{document}
 
+\begin{document}
 \subfile{./subfiles/title}
 \input{./subfiles/abstract}
 \input{./subfiles/version}
