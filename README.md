@@ -69,4 +69,4 @@ If you'd like to contribute to the DuraChain White Paper, please fork the reposi
 - [xcesiv](https://github.com/xcesiv)
 - [whimzyy](https://github.com/whimzyy)
 - [swaevior](https://github.com/swaevior)
--
+- [knowlonix](https://github.com/knowlonix)
