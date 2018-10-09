@@ -7,7 +7,7 @@ SHA=`git rev-parse --verify HEAD`
 git config user.name "$COMMIT_AUTHOR"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 git checkout --orphan gh-pages
-git rm --cached -r .
+git rm --cached -r -f .
 echo "# Automatic build" > README.md
 echo "Built pdf from \`$SHA\`. See https://github.com/durachain/whitepaper/ for details." >> README.md
 echo "The generated pdf is here: https://durachain.github.io/whitepaper.pdf" >> README.md
