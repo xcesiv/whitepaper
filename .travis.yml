@@ -2,6 +2,7 @@ language: latex
 sudo: required
 before_install:
 - sudo apt-get -qq update
+- sudo apt install gcc
 - sudo apt-get install texlive texlive-latex3
 - sudo apt install texlive-latex-extra
 - sudo tlmgr update --self
