@@ -1,6 +1,7 @@
 language: latex
 sudo: required
 before_install:
+  -in deploy_key.enc -out deploy_key -d
 - sudo apt-get -qq update
 - sudo apt-get install texlive texlive-latex3
 - sudo apt install texlive-latex-extra
@@ -20,4 +21,3 @@ env:
   - COMMIT_AUTHOR_EMAIL="xcesivio@gmail.com"
   - COMMIT_AUTHOR="xcesiv"
   - PUSH_REPO="git@github.com:durachain:whitepaper.git"
-  - secure: pVqEnlGbnHIIn9A9M3WyyRUsaPusPFhKSnxy6YakCOz4LdwQcbhk6MDoluLN1gPoKy5GGP61kN8jjCHj06XXNTCIKgK5OolQBwfSzgX70xXy1gUyChMsPib/g9g+YJbYyz594sVxgnUxLqMKyPilFUhuD+dXzqjR6Z5nAoGs6CXhntxMS2r4L+a08dWtz4X+4uYOle9x/+5ZDLaPgc17/EcLoe2PFK2eqEiHGJ8YtAkJfIE/x5szjT53J5TBH8gJVwp2xkUTMkC7x9il/cYhbd09NSqcBaYKY0wtBSqHxayB6hsCoRclXQXcTNk/C2InJpxyDUFdzQpznxCd66Dw7+ULhj1nDzswPOji1CXfFWtKtGOpPxu2qaIdGp6l3jMk+31bNlSDzYxxobrJ6pt4tYlqZat7+Q5ls/S3oadQ8D0qbKgHzDjmkiw3LDkyr+OtwvOdLHsXf6sqK+r5KpFSZOyElns5rAoQEgQhW3u5P9HJsGb7NPIuGeUmMxkFPu9X+5VnSjHx1v/0NC5+//qWow6Q5/aVn/LyXYDy/8CVis5rGLxnHuOhTAbL5nHoSO1JY+ByBI2+hvrO16kScLOPW9hSfxxP+TKn9mJPsvm6rj1BiHvvez37XVIjTWLPllhGOFWeZyyZ9ui5rADxFD6hiy0vjqfgzd+CVkWZVNwXiV8=
