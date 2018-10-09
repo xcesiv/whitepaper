@@ -42,3 +42,5 @@ bibtex build/whitepaper && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex && \
 pdflatex -output-directory=build -interaction=errorstopmode -halt-on-error whitepaper.tex
+rm -rf Options.tex
+rm -rf CommitVersion.tex
