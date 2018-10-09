@@ -16,9 +16,8 @@ deploy:
     branch: master
 env:
   global:
-    - secure: lQ4pEjPmnsqvDu4leNzBq39/rNjr25c/LZtBbZkPy0nNJ0Xp3SxyhcblgKc/NRtpkyrggAs41XMlCperBEmce7ab7668PfgB8y52A+e2C2HxUBvtUe/QrIimpErBOxqNKRk7veCbLYoHsonOF4IvkMXVKigsPUkmpU7BOLDhHiGP4hm0o2ftBOXb7M3hI7CXqMCztHzl/L8UZ1yg6q8B2gdbFqAJgbT2m2P1nPT95hHmr3uERSOnhwCoSNrIVBEGru0nSv5/wz7e9vbk6LZoZsTt9V5cFPtQjA9CxZcRlXf3cmaRioIQaqD5ZGUqtuVUKVODjVnVu+kfPYcDCIpRgrP/K8lTS34Cd/3G4V91m5Pmq1T7JohBjKeufN1Ol1pF4xMHR1jNI/3lRWCsYOoR71JlbSvhn1gYHAAj/F2gIuAnL16ylUUdiISGcXKQLvKMCm++lezLueiYvc4NVEPmjnNqxcqyEKuuKnaZUGlZh0M54UvqjXhxVrQAUGkOtAzXZnzSQmtBIz8BQVK+tpQw9FoDZrJkGkuCUgXD1sOsB3Nq5GVsGcjTwhMrsct6Op6LljeNH2KRZn2v6LO7Rc+SIQpexAXdnAzsg3MQpbp3h4MdJuRf1lTU8IH06jJa45AV63SfTgLxPTw2pEhLhgvt0CDNgUeBKjmd25F3LpEJj/o=
-
-    - ENCRYPTION_LABEL="81d85cdc1787"
-    - COMMIT_AUTHOR_EMAIL="xcesivio@gmail.com"
-    - COMMIT_AUTHOR="xcesiv"
-    - PUSH_REPO="git@github.com:durachain:whitepaper.git"
+  - ENCRYPTION_LABEL="81d85cdc1787"
+  - COMMIT_AUTHOR_EMAIL="xcesivio@gmail.com"
+  - COMMIT_AUTHOR="xcesiv"
+  - PUSH_REPO="git@github.com:durachain:whitepaper.git"
+  - secure: a43RkClx+qp2FjZOyEys+//EVLXb2D9yhr7DX5rDs1cch7Dpnptn9cLBIpnqZYc8BK2hpGXFaJZZbHbBd7O94swXc6jtxrQ44ziZEpTPowZxamaaD1VwY6Bjhlb13yBNl1Ve/JDxLlaHqZ/jVG+24siDJ+GZHX6t0mOiXciSE92mzFP9S6nND9qr1KJA86H8iqE10975f/OE8ZzmkMA81FPg6mgDy9XWhwZeSwpbVPdSF35djQIygFo4GXiig/T+UDuM/68zTrybi3/pNy1TCE3t/bJpMH+NRFT6Uftxv20M3CTsTY72ss67Pag7wQbE0Fif0Oho6Pta0GTB4NufmMKDlJNj8wSlpQf0hWv2MZeWYj1a0yafTfJ8swXWFM4iuou4YzGeqj9PBSPi/BPaic27GlyUBZLp32X275uHeVilv8BrzA4Of2NlYQ1mlOmqqpW7o//jtamNzKR6T8+z+NK+qi9AsISFahI37uUN62/UZlXOYTkGhljHlNYx7mfrH3YhidYxBggN44Er/0oDXxGN+R14E/Bzy3zFTihVQEMhBcI9XXZadjJ1qIHyXxLKro/GJ7uZJLdB+JLk29o0BID//0IC4FyIEvd0STXf9b/wxN/6yx4xBhx9J9rVIcl+T25qWnoOv+ZLNv5DuWgFcIIpUf4AnyT6+s9breJtdTM=
