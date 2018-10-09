@@ -3,10 +3,6 @@
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Build Status](https://travis-ci.com/durachain/whitepaper.svg?branch=master)](https://travis-ci.com/durachain/whitepaper)
 
-**Abstract:** Using an adapted version of the Matrix Spec, we present electronic health event environment implemented using distributed ledger technology. Such an environment will allow providers of durable medical equipment to more efficiently provide care to their patients and reduce delivery times for equipment. We also provide details about how electronic health events can be further developed so as to allow for use of our technology in all areas of healthcare delivery. With the right tool and proper deployment, electronic health events have the potential to radically transform the management of healthcare data.
-
-**Keywords:** healthcare technology, durable medical equipment, distributed ledger technology, electronic health event, Matrix
-
 This document was prepared using the LaTeX2e typesetting environment, produced by Leslie Lamport and the LaTeX3 team. It is free software based on the TeX system developed by Donald Knuth.
 
 It relies on the `pdflatex` engine and `bibtex` for bibliopgraphy management.
@@ -14,7 +10,7 @@ It relies on the `pdflatex` engine and `bibtex` for bibliopgraphy management.
 Additionally, a number of other packages were required to set the document you see here. The packages we used are all included in the 2018 release of TeXLive, which is distributed by the TeX Users Group. Please consult `wp.sty`, the file that provides the `whitepaper` document class, for more information on the packages we used.
 
 ## Setup Details
-The DuraChain white paper is a living document and will be updated continuously as we continue to design, develop, and deploy our electronic health event environment. This being the case, this repository is meant to serve up a hot, fresh PDF version of the white paper as it is modified. You can find the latest version of the PDF at [https://durachain.github.io/whitepaper.pdf](https://durachain.github.io/whitepaper.pdf).
+The DuraChain white paper is a living document and will be updated continuously as we continue to design, develop, and deploy our electronic health event environment. This being the case, this repository is meant to serve up a hot, fresh PDF version of the white paper as it is modified. You can find the latest version of the PDF at [https://durachain.github.io/whitepaper/whitepaper.pdf](https://durachain.github.io/whitepaper/whitepaper.pdf).
 
 There are several reasons why someone may choose to download the contents of this repository and/or compile the paper on their own. For those so inclined, the documentation that follows presents one of many paths that can be taken to realize this goal.
 
