@@ -1,16 +1,13 @@
-language: latex
 sudo: required
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install texlive texlive-latex3
 - sudo apt install texlive-latex-extra
-- chmod +x build.sh
-- chmod +x travis_deploy.sh
 script:
-- "./build.sh"
+- ./build.sh
 deploy:
   provider: script
-  script: "./travis_deploy.sh"
+  script: ./travis_deploy.sh
   skip_cleanup: true
   on:
     branch: master
