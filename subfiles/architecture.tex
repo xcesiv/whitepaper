@@ -21,6 +21,7 @@ The \textsc{ehr} represents a critical and positive shift toward better patient�
 We achieve this by regarding the patient as the single most important, invaluable piece of data. As such, no single entity will be allowed to ``own'' the data about a patient. Through permission-based access and restriction-conscious design, multiple stakeholders in a patient’s care may view and update the patient's \textsc{ehr} data appropriate for their position while being made aware of updates made by other parties. We term the action of recording updates to a patient’s \textsc{ehr} an Electronic Health Event (\textsc{ehe}).%
 
 \subsection{Users}
+\label{users}
 The most critical aspect involved in ensuring robust security of data stored in patient rooms is the management of user permissions. Thus, our system only allows users to join a patient's room via an invitation issued by an existing, qualified member of that room. In the event that a patient is new to the system and does not yet have a room built for them, then a qualified, permissioned user associated with the provider making contact with that patient will be able to initiate the creation of a patient room.%
 
 \paragraph{Level 0---System Administrator}
@@ -30,7 +31,7 @@ This user group is the root level access user group that designs, updates, and i
 This user group is comprised of the leadership of the organizations outside of DuraChain who handle patient data on a global scale. This group may include \textsc{hco}s, \textsc{dme} suppliers, and insurance providers.%
 
 \paragraph{Level 2---Provider/Practitioner Professional I}
-This group is made up of priamry licensed medical professionals, like doctors, who are authorized to write prescriptions or make recommendations for \textsc{dme}.%
+This group is made up of primary licensed medical professionals, like doctors, who are authorized to write prescriptions or make recommendations for \textsc{dme}.%
 
 \paragraph{Level 3---Provider/Practitioner Professional II}
 This group contains the secondary licensed medical professionals, like nurses, who help facilitate the transmission of patient data. This class of user also includes the sales representative of a \textsc{dme} supplier.%
@@ -41,7 +42,7 @@ These are the users for whom a patient room is dedicated. They will be provided 
 \subsection{Patient Rooms}
 Patients are added to the software through the creation of a room dedicated to that patient. \textsc{ehe}s will be posted to this location by the various users and the information shown to them will be a reflection of the group consensus. These rooms contain a running ledger of posted \textsc{ehe}s and discussions about the patient necessary for users to execute their functions.%
 
-\textsc{ehe}s posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain include those listed below in table \ref{tab:ehe}:%
+\textsc{ehe}s posted to the room comprise the available details about a patient. Events posted by and visible to DuraChain include those listed below in Table \ref{tab:ehe}:%
 
 \input{./subfiles/tables/ehe}
 
@@ -53,19 +54,16 @@ In order to promote easy navigation of the vast numbers of patient rooms that wi
 A user who is responsible for managing patients within a facility has the ability to create a new patient room---if the patient does not yet have one---and associate it with the facility. Grouping of patient rooms allows for an intuitive way for a facility to organize their patients and our \textsc{uxui} ensures a streamlined approach to this functionality.%
 
 \subsection{Electronic Health Events}
-An \textsc{ehe} is a confirmed update to a patient's \textsc{ehr} that is made verified by an authorized user. An \textsc{ehe} is recorded to the patient room ledger upon the completion of an 8-step action-based consensus algorithm that we call the ``Noble Eightfold Hash.''%
+An \textsc{ehe} is an update to a patient's \textsc{ehr} that is verified by an authorized user. An \textsc{ehe} is recorded to the patient room ledger upon the completion of an 8-step action-based consensus algorithm that we call the ``Noble Eightfold Hash.''%
 
   \subsubsection{Unverified Electronic Health Event}
   An \textsc{ehe} must be passed through the Noble Eightfold Hash before it can be posted to the ledger for a room. Until the \textsc{ehe} is verified by this process, it is known as an Unverified Electronic Health Event (u\textsc{ehe}).%
 
-  \subsubsection{Proof-of-Clocking}
-  \textbf{N.B.: Waiting to receive copy for this section}%
-
   \subsubsection{The Noble Eightfold Hash}
-  An \textsc{ehe} must be passed through an 8-step algorithmic process before the event can actually occur. Each action triggers a response from either a user, node, or the room, depdending on their power level. See section \textbf{XX} for an explanation of power levels. It is only after all 8 actions have occurred that the \textsc{ehe} will be posted to the ledger. This process is known as the Noble Eightfold Hash. Consult figure \ref{fig:diagram} for a graphical representation of of this process.%
+  An \textsc{ehe} must be passed through an 8-step algorithmic process before the event can actually occur. Each action triggers a response from either a user, node, or the room, depdending on their power level. See Section \ref{users} for an explanation of power levels. It is only after all 8 actions have occurred that the \textsc{ehe} will be posted to the ledger. This process is known as the Noble Eightfold Hash. Consult figure \ref{fig:diagram} for a graphical representation of of this process.%
 
     \paragraph{Action 1: Initiation Update Request}
-    The first action in the Noble Eightfold Hash is the Initiation Request. A user will attempt to update the ledger and, when this occurs, the u\textsc{ehe} and the \textsc{ehr} data to be updated will be sent to the node relative to the user.%
+    The first action in the Noble Eightfold Hash is the Initiation Request. A user will attempt to update the ledger and, when this occurs, the u\textsc{ehe} that is rewuesting to update the \textsc{ehr} will be updated and sent to the node relative to the user.%
 
     \paragraph{Action 2: Request Update Acknowledgement}
     The second action is the Request Acknowledgement. The u\textsc{ehe} will be sent to the room from the node requesting acknowledgement of the request to update the ledger.%
@@ -93,7 +91,7 @@ An \textsc{ehe} is a confirmed update to a patient's \textsc{ehr} that is made v
     Once the room has acknowledged verification of the \textsc{ehe}, the \textsc{ehe} will request an update to the ledger for that room. To do this, it will post a request to distribute the new room ledger to the nodes that the algorithm previously determined had appropriate verified associated users. It will also determine if there are any nodes that have verified users associated with the room that may not have been appropriate to sign the verification and post a request to those as well.%
 
     \paragraph{Action 7: Stage Update to Room Ledger}
-    Once a node has received a request to distribute the new room ledger, it will then stage an updated version of the room ledger for the relevant users in preparation for the next time the user logs in.%
+    Once a node has received a request to distribute the new room ledger, the room will stage an updated version of its ledger for the relevant users in preparation for the next time the user logs in.%
 
     \paragraph{Action 8: Distribute Electronic Health Record Data and Room Ledger}
     Until a user signs into DuraChain on a confirmed machine and accesses the room where the staged update is located, they will not have an updated version of the room ledger available to them. Upon sign-in, however, their version of the ledger will update and the \textsc{ehr} data will be accessible to them. Upon seeing a new \textsc{ehe} event in the room ledger, a user will know that this is a confirmed verified update to the Ledger and that the \textsc{ehr} data associated with the patient is the most up-to-date version.%
@@ -118,10 +116,3 @@ An \textsc{ehe} is a confirmed update to a patient's \textsc{ehr} that is made v
  Successful implementation of the DuraChain environment requires active adoption and participation by \textsc{dme} providers, who constitute our main client base.%
 
  In order to bring a client into our environment, they must have a copy of our server software properly installed and attached to their domain. From there, they can access our environment via our custom \textsc{ui} and begin creating patient rooms. To join a previously-existing patient room, they must be invited to an appropriately credentialed user inside of that room.%
-
-\subsubsection{Protected Health Information}
-Any discussion of healthcare data must obligatorily address the topic of Protected Health Information (\textsc{phi}). For DuraChain to be implemented properly, compliance with the Health Insurance Portability and Accountability Act of 1996 (\textsc{hipaa})\cite{HIPAA} is absolutely mandatory for both users and the servers housing patient data.%
-
-By placing the server instances within the domain of the \textsc{dme} provider, the client assumes responsibility for creating users, patient rooms, and \textsc{hipaa} compliance more broadly. As the vendor of the DuraChain software, we assume liability only for performing due diligence on our clientele and extracting an assurance of their compliance with \textsc{hipaa}.%
-
-In this way, the clients assume liability for compliance and removes that burden from us. This is not to a hedge or a dodge. In fact, it is actually the most efficient way to handle \textsc{hipaa} compliance and liability. Assuming that we only distribute our software to reputable and responsible \textsc{dme} businesses, who already have a \textsc{hipaa} mandate, then our software remains compliant as long as all server instances are maintained by compliant parties.%
