@@ -17,9 +17,9 @@ There are several reasons why someone may choose to download the contents of thi
 ### Build From Source
 The DuraChain White Paper repository comes with a script file to simply build the document (bash.sh). To do so, pen up your bash shell (Terminal for MacOSX users) and input the following:
 
-`git clone https://github.com/durachain/whitepaper`
-`cd whitepaper`
-`bash build.sh`
+1. `git clone https://github.com/durachain/whitepaper`
+1. `cd whitepaper`
+1. `bash build.sh`
 
 You will now have a new directory in the repository (build/) where you can find the latest build of the White Paper (build/whitepaper.pdf).
 
