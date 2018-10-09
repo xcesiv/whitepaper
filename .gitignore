@@ -78,3 +78,5 @@ whitepaper.pdf
 
 # Build Directory
 build
+Options.tex
+CommitVersion.tex
