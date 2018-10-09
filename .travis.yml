@@ -1,7 +1,8 @@
 sudo: required
 before_install:
 - sudo apt-get -qq update
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+- sudo apt-get install texlive texlive-latex3
+- sudo apt install texlive-latex-extra
 - chmod +x build.sh
 - chmod +x travis_deploy.sh
 script:
