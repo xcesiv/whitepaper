@@ -1,4 +1,8 @@
 # DuraChain White Paper
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Build Status](https://travis-ci.com/durachain/whitepaper.svg?branch=master)](https://travis-ci.com/durachain/whitepaper)
+
 **Abstract:** Using an adapted version of the Matrix Spec, we present electronic health event environment implemented using distributed ledger technology. Such an environment will allow providers of durable medical equipment to more efficiently provide care to their patients and reduce delivery times for equipment. We also provide details about how electronic health events can be further developed so as to allow for use of our technology in all areas of healthcare delivery. With the right tool and proper deployment, electronic health events have the potential to radically transform the management of healthcare data.
 
 **Keywords:** healthcare technology, durable medical equipment, distributed ledger technology, electronic health event, Matrix
