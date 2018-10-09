@@ -4,6 +4,8 @@ before_install:
 - sudo apt-get -qq update
 - sudo apt-get install texlive texlive-latex3
 - sudo apt install texlive-latex-extra
+- sudo tlmgr update --self
+- sudo tlmgr install latexmk
 - chmod +x build.sh
 - chmod +x travis_deploy.sh
 script:
