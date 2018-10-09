@@ -71,3 +71,10 @@ typings/
 *.log
 *.xvm
 whitepaper.pdf
+*.bbl
+*.blg
+*.out
+*.toc
+
+# Build Directory
+build
