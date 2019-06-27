@@ -9,8 +9,8 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 git checkout --orphan gh-pages
 git rm --cached -r -f .
 echo "# Automatic build" > README.md
-echo "Built pdf from \`$SHA\`. See https://github.com/durachain/whitepaper/ for details." >> README.md
-echo "The generated pdf is here: https://durachain.github.io/whitepaper/whitepaper.pdf" >> README.md
+echo "Built pdf from \`$SHA\`. See https://github.com/dura-sh/durachain-whitepaper/ for details." >> README.md
+echo "The generated pdf is here: https://dura-sh.github.io/durachain-whitepaper/whitepaper.pdf" >> README.md
 echo '<html><head><meta http-equiv="refresh" content="0; url=whitepaper.pdf" /></head><body></body></html>' > index.html
 mv build/whitepaper.pdf whitepaper.pdf
 git add -f README.md index.html whitepaper.pdf

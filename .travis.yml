@@ -18,5 +18,5 @@ env:
   - ENCRYPTION_LABEL="81d85cdc1787"
   - COMMIT_AUTHOR_EMAIL="xcesivio@gmail.com"
   - COMMIT_AUTHOR="xcesiv"
-  - PUSH_REPO="git@github.com:durachain/whitepaper.git"
+  - PUSH_REPO="git@github.com:dura-sh/durachain-whitepaper.git"
   - secure: 0lOd+TRz4/a9sg4Xi9hLwh/cBYvJ6WFha1e+UbTEpRMJLdohMEjVWefis765/pDLlhwruQV8NzDze4k2BQy7BFzEkh0mnhmumD+gM/bib73RN42SOHc+o4P3BS1Q4xxHhUogA0D8FCpNdmIoUaqe1Zeuf7uxBREZjxe0xHcbQ1gjosJB++/e//tvVQSjhPA0yKa+B1Vwb9Hk4A1mOn/rIFn1G2RyxGr7PJ7TQiG+vqBCUTtuH33oNujAAV+sW5DwNHIHWcqDgV2BbU0NCUnrjGnhaE7cPU/k9Bcpz9H1H+f2k1igiw5CQBliAKjmQLYTs76bQxgKvUEr+AoQTI2dTb+koYzCpLO42JLptkpWhF3OTm76CR9hzdGsR1AEZ2Z471yu18Bqw2qvBESLhNXxuI3zX3YKU6pe0MOdwaGDU573dyH8kXpvAL/grX+MCdHdtlJKwe0yHFdqEah44DEOcRI5eQu0ArZNU3ZjXWnFHvGId0ShALEpsip73H9VZRwMULa1kW6FRSAFGrRtGboT6GYOy0vpul2uSSt/PMfbCvZHbDc+9+yc+ypiAMD9IrlshvpnItbLu8LGilIsnjms9XmHE2oLfbG2hfhuOAcGJJ2e+XbSHK5QCRuWeZNbiOETnI5L/p5QHbHDeSkykOIz9zSZjRF765nkftjj6WcWOUc=

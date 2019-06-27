@@ -1,7 +1,7 @@
 # DuraChain White Paper
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Build Status](https://travis-ci.com/durachain/whitepaper.svg?branch=master)](https://travis-ci.com/durachain/whitepaper)
+[![Build Status](https://travis-ci.com/dura-sh/durachain-whitepaper.svg?branch=master)](https://travis-ci.com/dura-sh/durachain-whitepaper)
 
 This document was prepared using the LaTeX2e typesetting environment, produced by Leslie Lamport and the LaTeX3 team. It is free software based on the TeX system developed by Donald Knuth.
 
@@ -10,15 +10,15 @@ It relies on the `pdflatex` engine and `bibtex` for bibliopgraphy management.
 Additionally, a number of other packages were required to set the document you see here. The packages we used are all included in the 2018 release of TeXLive, which is distributed by the TeX Users Group. Please consult `wp.sty`, the file that provides the `whitepaper` document class, for more information on the packages we used.
 
 ## Setup Details
-The DuraChain white paper is a living document and will be updated continuously as we continue to design, develop, and deploy our electronic health event environment. This being the case, this repository is meant to serve up a hot, fresh PDF version of the white paper as it is modified. You can find the latest version of the PDF at [https://durachain.github.io/whitepaper/whitepaper.pdf](https://durachain.github.io/whitepaper/whitepaper.pdf).
+The DuraChain white paper is a living document and will be updated continuously as we continue to design, develop, and deploy our electronic health event environment. This being the case, this repository is meant to serve up a hot, fresh PDF version of the white paper as it is modified. You can find the latest version of the PDF at [https://dura-sh.github.io/durachain-whitepaper/whitepaper.pdf](https://dura-sh.github.io/durachain-whitepaper/whitepaper.pdf).
 
 There are several reasons why someone may choose to download the contents of this repository and/or compile the paper on their own. For those so inclined, the documentation that follows presents one of many paths that can be taken to realize this goal.
 
 ### Build From Source
 The DuraChain White Paper repository comes with a script file to simply build the document (bash.sh). To do so, pen up your bash shell (Terminal for MacOSX users) and input the following:
 
-1. `git clone https://github.com/durachain/whitepaper`
-1. `cd whitepaper`
+1. `git clone https://github.com/dura-sh/durachain-whitepaper`
+1. `cd durachain-whitepaper`
 1. `bash build.sh`
 
 You will now have a new directory in the repository (build/) where you can find the latest build of the White Paper (build/whitepaper.pdf).
@@ -60,7 +60,7 @@ A number of other packages can improve the LaTeX experience when using Atom. The
 - `latex-wordcount`, which does a decent job at estiamting document word counts.
 
 ## Issues
-If you'd like to submit an issue to the DuraChain White Paper repository, please open an [issue](https://github.com/durachain/whitepaper/issues) and follow the template for submission.
+If you'd like to submit an issue to the DuraChain White Paper repository, please open an [issue](https://github.com/dura-sh/durachain-whitepaper/issues) and follow the template for submission.
 
 ## Contribute to the DuraChain White Paper
 If you'd like to contribute to the DuraChain White Paper, please fork the repository and once you've made your contributions in your our directory, submit a pull request to the master branch.
